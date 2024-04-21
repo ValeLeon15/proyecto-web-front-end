@@ -10,6 +10,7 @@ import { solicitudArrendamiento } from '../model/solicitudArrendamiento';
   providedIn: 'root'
 })
 export class ArrendatarioService {
+  
 
   constructor(
     private http: HttpClient
@@ -21,6 +22,10 @@ export class ArrendatarioService {
 
   listarArrendatarios(): Observable<Arrendatario[]> {
     return this.http.get<Arrendatario[]>(`${environment.serverUrl}/progrupo14/arrendatarios`)
+  }
+
+  obtenerArrendatarioPorId(id: number): Observable<Arrendatario>{
+    return this.http.get<Arrendatario>(`${environment.serverUrl}/progrupo14/arrendatarios/${id}`);
   }
   
 
@@ -34,9 +39,11 @@ export class ArrendatarioService {
     return this.http.post<Arrendatario>(`${environment.serverUrl}/progrupo14/arrendatarios`, arrendatario, { headers: this.headers })
   }
 
-  actualizarArrendatario(arrendatario: Arrendatario) : Observable<Arrendatario>{ {
-    return this.http.post<Arrendatario>(`${environment.serverUrl}/progrupo14/arrendatarios`, arrendatario, { headers: this.headers })
+  actualizarArrendatario(arrendatario: Arrendatario) : Observable<Arrendatario>{ 
+    return this.http.put<Arrendatario>(`${environment.serverUrl}/progrupo14/arrendatarios`, arrendatario, { headers: this.headers })
   }
+
 }
-}
+
+
 

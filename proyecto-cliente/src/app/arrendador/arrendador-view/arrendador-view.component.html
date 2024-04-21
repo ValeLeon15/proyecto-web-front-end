@@ -1,0 +1,31 @@
+<p>Ver el arrendatario</p>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Ver solicitudes de arrendamiento</th>
+                <th>Eliminar arrendatario</th>
+                <th>Ver arrendatario</th>
+                <th>Editar arrendatario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{arrendador.id}}</td>
+                <td>{{arrendador.nombre}}</td>
+                <td>{{arrendador.apellido}}</td>
+                <td>{{arrendador.correo}}</td>
+                <td>{{arrendador.telefono}}</td>
+                <td><a [routerLink]="['/arrendador/delete', arrendador.id]">Eliminar</a></td>
+                <td><a [routerLink]="['/arrendador/edit', arrendador.id]">Editar</a></td>
+            <!--ya no quiero que se muestre asi, quiero que esta informacion 
+                solo se muestre del usuario que viene de arrendatario list-->
+            <tr>
+        </tbody>
+    </table>
+</div>

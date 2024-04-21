@@ -11,7 +11,7 @@ export class FormComponent implements OnInit{
 
   @Input() esCrear: boolean | undefined;
   arrendatarioCrearOActualizar: Arrendatario = new Arrendatario(0, '', '', '', 0, '');
-
+  
   constructor(private arrendatarioService: ArrendatarioService) { 
 
   }

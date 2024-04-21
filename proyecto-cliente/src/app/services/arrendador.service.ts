@@ -20,4 +20,15 @@ export class ArrendadorService {
   listarArrendadores(): Observable<Arrendador[]> {
     return this.http.get<Arrendador[]>(`${environment.serverUrl}/progrupo14/arrendadores`)
   }
+
+  borrarArrendador(id: number): Observable<void> {
+    return this.http.delete<void>(`${environment.serverUrl}/progrupo14/arrendadores/${id}`)
+  }
+
+  crearArrendador(arrendador : Arrendador) : Observable<Arrendador>{
+    return this.http.post<Arrendador>(`${environment.serverUrl}/progrupo14/arrendadores`, arrendador, { headers: this.headers })
+  }
+  ActualizarArrendador(arrendador: Arrendador) : Observable<Arrendador>{ 
+    return this.http.post<Arrendador>(`${environment.serverUrl}/progrupo14/arrendadores`, arrendador, { headers: this.headers })
+  }
 }

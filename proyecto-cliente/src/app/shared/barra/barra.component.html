@@ -9,19 +9,30 @@
 <body>
   <header>
     <nav> <!-- barra de inicio-->
-        <a href="/html/proyecto/presentacionEquipo.html" class = "link">Arrendatario</a> 
-         <div class="submenu">
-                <a href="descripcionProyecto.html">List</a>
-                <a href="requerimientos.html">Crear</a>
-            </div> 
         <div class ="link">
-            <a href="../bienvenida.html" class="link">Arrendador</a>
+          <a [routerLink]="['/arrendatario/list']" class = "link">Arrendatario</a> 
+          <div class="submenu">
+                <a [routerLink]="['/arrendatario/list']">Listar arrendatarios</a>
+                <a [routerLink]="['/arrendatario/create']">Crear un nuevo arrendatario</a>
+          </div> 
+        </div>
+
+        <div class ="link">
+            <a [routerLink]="['/arrendador/list']" class="link">Arrendador</a>
             <div class="submenu">
-                <a href="descripcionProyecto.html">List</a>
-                <a href="requerimientos.html">Crear</a>
+                 <a [routerLink]="['/arrendador/list']">Listar arrendadores</a>
+                 <a [routerLink]="['/arrendador/create']">Crear un nuevo arrendador</a>
+                 <a [routerLink]="['/solicitudarrendamiento/list']">Listar solicitudes</a>
             </div>     
         </div>
-        <a href="../contactenos.html" class="link">Propiedad</a>    
+
+        <div class ="link">
+          <a [routerLink]="['/propiedad/list']" class="link">Propiedad</a>
+          <div class="submenu">
+               <a [routerLink]="['/propiedad/list']">Listar propiedades</a>
+               <a [routerLink]="['/propiedad/list']">Crear propiedades</a>
+          </div>     
+      </div>
     </nav>
   </header>
 

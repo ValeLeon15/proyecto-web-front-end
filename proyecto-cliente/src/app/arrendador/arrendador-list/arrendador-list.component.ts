@@ -24,7 +24,7 @@ export class ArrendadorListComponent implements OnInit {
     console.log(this.arrendadores);
   }
 
-  borrarArrendador(arrendadorId: number) {
-    //lo implementan ustedes
-    }
+  borrarArrendador(id: number) {
+    this.arrendadorService.borrarArrendador(id).subscribe();
+    this.router.navigate(['/arrendadores/list']);    }
 }
