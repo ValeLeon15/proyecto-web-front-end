@@ -1,4 +1,6 @@
-<div>
+
+<div class="container">
+    <h1>Listado de Arrendadores</h1>
     <table>
         <thead>
             <tr>
@@ -12,7 +14,7 @@
                 <td>{{arrendador.id}}</td>
                 <td>{{arrendador.nombre}}</td>
                 <td>{{arrendador.apellido}}</td>
-                <td><a [routerLink]="['/arrendador/view', arrendador.id]">Ver</a></td>
+                <td><a [routerLink]="['/arrendador/view/:id', arrendador.id]">Ver</a></td>
             </tr>
         </tbody>
     </table>
