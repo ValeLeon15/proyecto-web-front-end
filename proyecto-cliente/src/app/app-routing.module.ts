@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SolicitudListComponent } from './solicitud-arrendamiento/solicitud-list/solicitud-list.component';
 import { PropiedadListComponent } from './propiedad/propiedad-list/propiedad-list.component';
 import { PropiedadViewComponent } from './propiedad/propiedad-view/propiedad-view.component';
+import { PropiedadCreateComponent } from './propiedad/propiedad-create/propiedad-create.component';
 
 import { ArrendadorListComponent } from './arrendador/arrendador-list/arrendador-list.component';
 import { ArrendadorCreateComponent } from './arrendador/arrendador-create/arrendador-create.component';
@@ -18,8 +19,8 @@ import { ArrendatarioViewComponent } from './arrendatario/arrendatario-view/arre
 
 const routes: Routes = [
   { path: 'arrendador/list', component: ArrendadorListComponent },
-  { path: 'arrendador/create', component: ArrendadorEditComponent },
-  { path: 'arrendador/edit', component: ArrendadorCreateComponent},
+  { path: 'arrendador/create', component: ArrendadorCreateComponent },
+  { path: 'arrendador/edit', component: ArrendadorEditComponent},
   { path: 'arrendador/view/:id', component: ArrendadorViewComponent},
 
   { path: 'arrendatario/list', component: ArrentarioListComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'propiedades/arrendador/:id', component: PropiedadListComponent},
   { path: 'propiedad/view/:id', component: PropiedadViewComponent},
   { path: 'propiedad/list', component: PropiedadListComponent},
+  { path: 'propiedad/create', component: PropiedadCreateComponent},
 
   { path: 'solicitudarrendamiento/list', component: SolicitudListComponent},
   { path: 'solicitudarrendamiento/arrendatario/:id', component: SolicitudListComponent},

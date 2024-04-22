@@ -20,6 +20,10 @@ import { ArrendadorCreateComponent } from './arrendador/arrendador-create/arrend
 import { ArrendadorViewComponent } from './arrendador/arrendador-view/arrendador-view.component';
 
 import { BarraComponent } from './shared/barra/barra.component';
+import { PropiedadEditComponent } from './propiedad/propiedad-edit/propiedad-edit.component';
+import { PropiedadCreateComponent } from './propiedad/propiedad-create/propiedad-create.component';
+import { FormPropiedadComponent } from './shared/form-propiedad/form-propiedad.component';
+import { FormArrendadorComponent } from './shared/form-arrendador/form-arrendador.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,10 @@ import { BarraComponent } from './shared/barra/barra.component';
     PropiedadViewComponent,
 
     BarraComponent,
+      PropiedadEditComponent,
+      PropiedadCreateComponent,
+      FormPropiedadComponent,
+      FormArrendadorComponent,
   ],
   imports: [
     BrowserModule,

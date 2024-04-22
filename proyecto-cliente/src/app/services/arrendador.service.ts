@@ -28,7 +28,8 @@ export class ArrendadorService {
   crearArrendador(arrendador : Arrendador) : Observable<Arrendador>{
     return this.http.post<Arrendador>(`${environment.serverUrl}/progrupo14/arrendadores`, arrendador, { headers: this.headers })
   }
-  ActualizarArrendador(arrendador: Arrendador) : Observable<Arrendador>{ 
+  
+  actualizarArrendador(arrendador: Arrendador) : Observable<Arrendador>{ 
     return this.http.post<Arrendador>(`${environment.serverUrl}/progrupo14/arrendadores`, arrendador, { headers: this.headers })
   }
 }
