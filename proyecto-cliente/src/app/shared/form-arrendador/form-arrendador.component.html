@@ -1,23 +1,26 @@
+<div class="background"></div>
+<div class="container">
 <form action="/submit-your-form-handler" method="POST">
 
     <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" name="nombre" required [(ngModel)]="arrendadorCrearOActualizar.nombre"><br><br>
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required [(ngModel)]="arrendadorCrearOActualizar.nombre"><br><br>
   
     <label for="apellido">Apellido:</label><br>
-    <input type="text" id="apellido" name="apellido" required [(ngModel)]="arrendadorCrearOActualizar.apellido"><br><br>
+    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required [(ngModel)]="arrendadorCrearOActualizar.apellido"><br><br>
   
     <label for="email">Correo electrónico:</label><br>
-    <input type="email" id="email" name="email" required [(ngModel)]="arrendadorCrearOActualizar.correo"><br><br>
+    <input type="email" id="email" name="email" placeholder="Email" required [(ngModel)]="arrendadorCrearOActualizar.correo"><br><br>
   
     <label for="password">Contraseña:</label><br>
-    <input type="password" id="password" name="password" required [(ngModel)]="arrendadorCrearOActualizar.contrasena"><br><br>
+    <input type="password" id="password" name="password" placeholder="Password" required [(ngModel)]="arrendadorCrearOActualizar.contrasena"><br><br>
   
     <label for="telefono">Teléfono:</label><br>
-    <input type="tel" id="telefono" name="telefono" required [(ngModel)]="arrendadorCrearOActualizar.telefono"><br><br>
+    <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required [(ngModel)]="arrendadorCrearOActualizar.telefono"><br><br>
   
-    <input *ngIf="esCrear" type="submit" value="Crear arrendatario" (click)="crearArrendador()">
-    <input *ngIf="!esCrear"type type="submit" value="Actualizar arrendatario" (click)="actualizarArrendador()">
+    <input *ngIf="esCrear" type="submit" value="Crear arrendador" (click)="crearArrendador()">
+    <input *ngIf="!esCrear"type type="submit" value="Actualizar arrendador" (click)="actualizarArrendador()">
   
     
   </form>
+</div>
   

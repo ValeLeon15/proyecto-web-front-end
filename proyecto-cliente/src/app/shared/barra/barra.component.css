@@ -13,7 +13,7 @@ body {
     align-items: center;
     background-color: rgb(32, 39, 57);
     color: #fff;
-    padding: 16px;
+    padding: 20px;
     position: sticky; /*para que se fije en la parte superior cuando se desplaza hacia abajo*/
   }
   
@@ -37,6 +37,7 @@ body {
     font-weight: bolder;
   }
   
+  /* Estilo para los enlaces de navegación al pasar el mouse */
   .link:hover {
     background-color: rgb(153, 153, 153);
     color: white;
@@ -50,6 +51,7 @@ body {
     
   }
   
+  /* Estilo para los enlaces del menú desplegable */
   nav a:hover { /*color en el submenu por el link*/
     color: snow;
     background-color: rgb(39, 150, 172);

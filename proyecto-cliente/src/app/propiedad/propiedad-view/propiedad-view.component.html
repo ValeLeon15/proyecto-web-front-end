@@ -1,8 +1,46 @@
+
 <div>
-  <ul>
-      <li>{{propiedad.id}}</li>
-      <li>{{propiedad.nombrePropiedad}}</li>
-      <li>{{propiedad.departamento}}</li>
-      <li>{{propiedad.municipio}}</li>
-  </ul>
+  <div>
+    <table>
+        <thead>
+            <tr>
+                <th>nombrePropiedad</th>
+                <th>municipio</th>
+                <th>departamento</th>
+                <th>tipoIngreso</th>
+                <th>descripción</th>
+                <th>cantHabitaciones</th>
+                <th>cantBanos</th>
+                <th>permiteMascotas</th>
+                <th>tienePiscina</th>
+                <th>tieneAsador</th>
+                <th>valorNoche</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+                <td>{{propiedad.id}}</td>
+                <td>{{propiedad.nombrePropiedad}}</td>
+                <td>{{propiedad.municipio}}</td>
+                <td>{{propiedad.departamento}}</td>
+                <td>{{propiedad.tipoIngreso}}</td>
+                <td>{{propiedad.descripcion}}</td>
+                <td>{{propiedad.cantHabitaciones}}</td>
+                <td>{{propiedad.cantBanos}}</td>
+                <td>{{propiedad.permiteMascotas}}</td>
+                <td>{{propiedad.tienePiscina}}</td>
+                <td>{{propiedad.tieneAsador}}</td>
+                <td>{{propiedad.valorNoche}}</td>
+              
+        </tbody>
+    </table>
+  </div>
+
+  <td><a [routerLink]="['/propiedad/edit', propiedad.id]">Editar propiedad</a></td>
+  <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Eliminar propiedad</a></td>
+  <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Comprar</a></td>
+  <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Agregar fotos</a></td>
+
+
 </div>

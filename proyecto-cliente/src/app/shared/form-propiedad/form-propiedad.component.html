@@ -1,40 +1,49 @@
-
+<div class="background"></div>
+<div class="container">
 <form action="/submit-your-form-handler" method="POST">
 
     <label for="nombrePropiedad">Nombre de la propiedad:</label><br>
-    <input type="text" id="nombrePropiedad" name="nombrePropiedad" required [(ngModel)]="propiedadCrearOActualizar.nombrePropiedad"><br><br>
+    <input type="text" id="nombrePropiedad" name="nombrePropiedad" placeholder="Nombre" required [(ngModel)]="propiedadCrearOActualizar.nombrePropiedad"><br><br>
   
     <label for="departamento">Departamento:</label><br>
-    <input type="text" id="departamento" name="departamento" required [(ngModel)]="propiedadCrearOActualizar.departamento"><br><br>
+    <input type="text" id="departamento" name="departamento" placeholder="Departamento" required [(ngModel)]="propiedadCrearOActualizar.departamento"><br><br>
   
     <label for="municipio">Municipio:</label><br>
-    <input type="text" id="municipio" name="municipio" required [(ngModel)]="propiedadCrearOActualizar.municipio"><br><br>
+    <input type="text" id="municipio" name="municipio" placeholder="Municipio" required [(ngModel)]="propiedadCrearOActualizar.municipio"><br><br>
   
     <label for="tipoIngreso">Tipo de ingreso:</label><br>
-    <input type="text" id="tipoIngreso" name="tipoIngreso" required [(ngModel)]="propiedadCrearOActualizar.tipoIngreso"><br><br>
+    <input type="text" id="tipoIngreso" name="tipoIngreso" placeholder="Tipo de ingreso" required [(ngModel)]="propiedadCrearOActualizar.tipoIngreso"><br><br>
   
     <label for="descripcion">Descripcion:</label><br>
-    <input type="text" id="descripcion" name="descripcion" required [(ngModel)]="propiedadCrearOActualizar.descripcion"><br><br>
+    <input type="text" id="descripcion" name="descripcion" placeholder="Descripción" required [(ngModel)]="propiedadCrearOActualizar.descripcion"><br><br>
   
     <label for="cantHabitaciones">Cantidad Habitaciones:</label><br>
-    <input type="text" id="cantHabitaciones" name="cantHabitaciones" required [(ngModel)]="propiedadCrearOActualizar.cantHabitaciones"><br><br>
+    <input type="number" id="cantHabitaciones" name="cantHabitaciones" required [(ngModel)]="propiedadCrearOActualizar.cantHabitaciones"><br><br>
   
     <label for="permiteMascotas">Permite mascotas:</label><br>
-    <input type="text" id="permiteMascotas" name="permiteMascotas" required [(ngModel)]="propiedadCrearOActualizar.permiteMascotas"><br><br>
+    <select id="permiteMascotas" name="permiteMascotas" required [(ngModel)]="propiedadCrearOActualizar.permiteMascotas">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select><br><br>
   
     <label for="tienePiscina">Tiene piscina:</label><br>
-    <input type="text" id="tienePiscina" name="tienePiscina" required [(ngModel)]="propiedadCrearOActualizar.tienePiscina"><br><br>
+    <select id="tienePiscina" name="tienePiscina" required [(ngModel)]="propiedadCrearOActualizar.tienePiscina">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select><br><br>
     
     <label for="tieneAsador">Tiene asador:</label><br>
-    <input type="text" id="tieneAsador" name="tieneAsador" required [(ngModel)]="propiedadCrearOActualizar.tieneAsador"><br><br>
+    <select id="tieneAsador" name="tieneAsador" required [(ngModel)]="propiedadCrearOActualizar.tieneAsador">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select><br><br>
   
     <label for="valorNoche">valor Noche:</label><br>
-    <input type="text" id="valorNoche" name="valorNoche" required [(ngModel)]="propiedadCrearOActualizar.valorNoche"><br><br>
+    <input type="number" id="valorNoche" name="valorNoche" required [(ngModel)]="propiedadCrearOActualizar.valorNoche"><br><br>
 
   
     <input *ngIf="esCrear" type="submit" value="Crear propiedad" (click)="crearPropiedad()">
     <input *ngIf="!esCrear"type type="submit" value="Actualizar propiedad" (click)="actualizarPropiedad()">
   
-    
   </form>
-  
+</div>
