@@ -7,6 +7,7 @@
                 <th>id</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Ver arrendador</th>
             </tr>
         </thead>
         <tbody>
@@ -18,5 +19,6 @@
             </tr>
         </tbody>
     </table>
+    <td><a [routerLink]="['/arrendador/view/:id']">Ver</a></td> <!--borrar solo es una prueba-->
 </div>
 <a [routerLink]="['/arrendador/create']">Crear un nuevo arrendador</a>

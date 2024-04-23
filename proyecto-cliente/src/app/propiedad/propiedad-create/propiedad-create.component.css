@@ -2,3 +2,15 @@ h1{
     text-align: center;
     font-size: 50px;
 }
+
+.boton{
+    background-color: #0056b3; /* Color de fondo de los botones */
+    color: white; /* Color del texto de los botones */
+    padding: 20px 20px; /* Espaciado interno aumentado para hacer el botón más grande */
+    font-size: 20px; /* Tamaño de fuente aumentado */
+    cursor: pointer;
+    border: none; /* Sin borde */
+    /*correrlo un poco a abajo*/
+    margin-top: 0px;
+    margin-left: 50px;
+}

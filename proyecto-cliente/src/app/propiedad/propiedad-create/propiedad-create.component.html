@@ -1,4 +1,6 @@
 <h1>Formulario para crear una propiedad</h1>
 <app-form-propiedad [esCrear] = "esCrear"></app-form-propiedad> <!--componente hijo-->
+<button class= "boton" (click)="mostrarFormularioFoto()">Subir foto</button>
 
+<app-subir-foto *ngIf="mostrarFormulario" (fotoSubida)="redirigirAPropiedad()"></app-subir-foto>
   

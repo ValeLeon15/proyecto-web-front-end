@@ -24,6 +24,10 @@ import { PropiedadEditComponent } from './propiedad/propiedad-edit/propiedad-edi
 import { PropiedadCreateComponent } from './propiedad/propiedad-create/propiedad-create.component';
 import { FormPropiedadComponent } from './shared/form-propiedad/form-propiedad.component';
 import { FormArrendadorComponent } from './shared/form-arrendador/form-arrendador.component';
+import { SolicitudViewComponent } from './solicitud-arrendamiento/solicitud-view/solicitud-view.component';
+import { SolicitudCreateComponent } from './solicitud-arrendamiento/solicitud-create/solicitud-create.component';
+import { FormSolicitudComponent } from './shared/form-solicitud/form-solicitud.component';
+import { SubirFotoComponent } from './subir-foto/subir-foto.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,10 @@ import { FormArrendadorComponent } from './shared/form-arrendador/form-arrendado
       PropiedadCreateComponent,
       FormPropiedadComponent,
       FormArrendadorComponent,
+      SolicitudViewComponent,
+      SolicitudCreateComponent,
+      FormSolicitudComponent,
+      SubirFotoComponent,
   ],
   imports: [
     BrowserModule,

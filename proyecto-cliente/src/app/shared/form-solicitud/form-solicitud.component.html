@@ -1,0 +1,21 @@
+<div class="background"></div>
+<div class="container">
+<form action="/submit-your-form-handler" method="POST">
+
+    <label for="fechaInicial">Fecha inicial :</label><br>
+    <input type="date" id="fechaInicial" name="fechaInicial" placeholder="Fecha Inicial" required [(ngModel)]="solicitudCrearOActualizar.fechaInicial"><br>
+  
+    <label for="fechaFinal">Fecha final:</label><br>
+    <input type="date" id="fechaFinal" name="fechaFinal" placeholder="Departamento" required [(ngModel)]="solicitudCrearOActualizar.fechaFinal"><br>
+  
+    <label for="cantPersonas">Cantidad de personas:</label><br>
+    <input type="number" id="cantPersonas" name="cantPersonas" required [(ngModel)]="solicitudCrearOActualizar.cantPersonas"><br>
+  
+    <label for="estado">Estado:</label><br>
+    <select id="estado" name="estado" required [(ngModel)]="solicitudCrearOActualizar.estado">
+      <option value="true">Sí</option>
+      <option value="false">No</option>
+    </select><br>
+    <input type="submit" value="Crear solicitud">
+  </form>
+</div>

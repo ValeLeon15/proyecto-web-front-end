@@ -20,4 +20,9 @@ export class SolicitudArrendamientoService {
   listarSolicitudesPorArrendatario(id: number): Observable<solicitudArrendamiento[]> {
     return this.http.get<solicitudArrendamiento[]>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/arrendatario/${id}`)
   }
+
+  crearSolicitud(solicitud : solicitudArrendamiento) : Observable<solicitudArrendamiento>{
+    return this.http.post<solicitudArrendamiento>(`${environment.serverUrl}/progrupo14/Solicitud`, solicitud, { headers: this.headers })
+  }
+
 }

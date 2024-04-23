@@ -2,7 +2,11 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { SolicitudListComponent } from './solicitud-arrendamiento/solicitud-list/solicitud-list.component';
+import { SolicitudCreateComponent } from './solicitud-arrendamiento/solicitud-create/solicitud-create.component';
+
+
 import { PropiedadListComponent } from './propiedad/propiedad-list/propiedad-list.component';
 import { PropiedadViewComponent } from './propiedad/propiedad-view/propiedad-view.component';
 import { PropiedadCreateComponent } from './propiedad/propiedad-create/propiedad-create.component';
@@ -34,6 +38,7 @@ const routes: Routes = [
   { path: 'propiedad/create', component: PropiedadCreateComponent},
 
   { path: 'solicitudarrendamiento/list', component: SolicitudListComponent},
+  { path: 'solicitudarrendamiento/create', component: SolicitudCreateComponent},
   { path: 'solicitudarrendamiento/arrendatario/:id', component: SolicitudListComponent},
   { path: '', pathMatch: 'full', redirectTo: 'arrendatarios/list' }, //siempre va a redirigir a arrendatarios/list cuando no se ponga nada como path en la url
 ];

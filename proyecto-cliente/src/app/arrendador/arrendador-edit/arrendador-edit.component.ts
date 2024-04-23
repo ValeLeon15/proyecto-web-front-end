@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Arrendador } from '../../model/arrendador';
 
 @Component({
   selector: 'app-arrendador-edit',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './arrendador-edit.component.css'
 })
 export class ArrendadorEditComponent {
+  arrendadorCrear: Arrendador = new Arrendador(0, '', '', '', 0, '');
+  esCrear: boolean = false;
 
 }

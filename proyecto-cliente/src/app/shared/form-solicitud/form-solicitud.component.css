@@ -1,0 +1,66 @@
+/* Estilos generales */
+ /* Estilos específicos */
+ .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(130, 147, 188); /* Fondo de la pantalla */
+    z-index: -1;  }
+  
+  .container {
+    background-color: rgb(46, 60, 105); /* Fondo del formulario */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+  }
+  
+  label {
+    color: white; /* Color del texto de las etiquetas */
+
+  }
+  
+  input[type="date"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #050404;
+    border-radius: 5px; /* Bordes redondos */
+    box-sizing: border-box;
+  }
+  
+  input[type="date"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  input[type="submit"] {
+    background-color: #0056b3; /* Color de fondo de los botones */
+    color: white; /* Color del texto de los botones */
+    padding: 20px 20px; /* Espaciado interno aumentado para hacer el botón más grande */
+    font-size: 20px; /* Tamaño de fuente aumentado */
+    cursor: pointer;
+    border: none; /* Sin borde */
+    display: block; /* Convertir a bloque para centrarlo */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  
