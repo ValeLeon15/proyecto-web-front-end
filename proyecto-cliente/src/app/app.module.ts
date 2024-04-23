@@ -28,6 +28,7 @@ import { SolicitudViewComponent } from './solicitud-arrendamiento/solicitud-view
 import { SolicitudCreateComponent } from './solicitud-arrendamiento/solicitud-create/solicitud-create.component';
 import { FormSolicitudComponent } from './shared/form-solicitud/form-solicitud.component';
 import { SubirFotoComponent } from './subir-foto/subir-foto.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { SubirFotoComponent } from './subir-foto/subir-foto.component';
       SolicitudCreateComponent,
       FormSolicitudComponent,
       SubirFotoComponent,
+      FooterComponent,
   ],
   imports: [
     BrowserModule,

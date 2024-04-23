@@ -18,7 +18,7 @@
     <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required [(ngModel)]="arrendadorCrearOActualizar.telefono"><br><br>
   
     <input *ngIf="esCrear" type="submit" value="Crear arrendador" (click)="crearArrendador()">
-    <input *ngIf="!esCrear"type type="submit" value="Actualizar arrendador" (click)="actualizarArrendador()">
+    <input *ngIf="!esCrear"type type="submit" value="Actualizar arrendador" (click)="updateArrendador()">
   
     
   </form>

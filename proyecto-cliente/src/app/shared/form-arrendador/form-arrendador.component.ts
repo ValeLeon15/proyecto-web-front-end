@@ -10,10 +10,11 @@ import { ArrendadorService } from '../../services/arrendador.service';
 export class FormArrendadorComponent implements OnInit{
   @Input() esCrear: boolean | undefined;
   arrendadorCrearOActualizar: Arrendador = new Arrendador(0, '', '', '', 0, '');
-  
-  constructor(private arrendadorService: ArrendadorService) { 
 
-  }
+  mensajeExito: string = '';
+  mensajeError: string = '';
+
+  constructor(private arrendadorService: ArrendadorService) { }
   ngOnInit(): void {
     if(!this.esCrear){
       this 
@@ -28,13 +29,26 @@ export class FormArrendadorComponent implements OnInit{
       }
     );
     }
+    
+  cargarArrendador(id: number) {
+    this.arrendadorService.obtenerArrendadorPorId(id).subscribe(
+      (data: Arrendador) => {
+        this.arrendadorCrearOActualizar = data;
+      },
+      error => {
+        console.error('Error al cargar el arrendador:', error);
+      }
+    );
+  }
 
-    actualizarArrendador() {
-      console.log('Actualizar Arrendador', this.arrendadorCrearOActualizar);
+    updateArrendador() {
       this.arrendadorService.actualizarArrendador(this.arrendadorCrearOActualizar).subscribe(
-        arrendador => {
-          console.log('Arrendador actualizado', arrendador);
-          this.arrendadorCrearOActualizar = new Arrendador(0, '', '', '', 0, '');
+        response => {
+          this.mensajeExito = 'Arrendador actualizado correctamente.';
+        },
+        error => {
+          this.mensajeError = 'Error al actualizar el arrendador.';
+          console.error('Error al actualizar el arrendador:', error);
         }
       );
     }
