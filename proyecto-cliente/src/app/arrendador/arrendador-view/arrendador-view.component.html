@@ -19,10 +19,9 @@
                 <td>{{arrendador.apellido}}</td>
                 <td>{{arrendador.correo}}</td>
                 <td>{{arrendador.telefono}}</td>
-                <td><a [routerLink]="['/arrendador/delete', arrendador.id]">Eliminar</a></td>
+                <td><button (click)="borrarArrendador(arrendador.id)">Eliminar</button></td>
                 <td><a [routerLink]="['/arrendador/edit', arrendador.id]">Editar</a></td>
             </tr>
         </tbody>
-    </table>
-    <td><a [routerLink]="['/arrendador/edit']">Editar</a><!--borrar solo es una prueba--></td>
+    </table>    
 </div>

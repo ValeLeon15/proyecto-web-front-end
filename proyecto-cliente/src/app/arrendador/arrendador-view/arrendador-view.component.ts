@@ -43,6 +43,14 @@ export class ArrendadorViewComponent implements OnChanges {
   }
 
   borrarArrendador(id: number) {
-    this.arrendadorService.borrarArrendador(id).subscribe();
-    this.router.navigate(['/arrendadores/list']);    }
+    this.arrendadorService.borrarArrendador(id).subscribe(
+      () => {
+        console.log('Arrendador borrado exitosamente');
+        this.router.navigate(['/arrendador/list']);
+      },
+      error => {
+        console.error('Error al borrar el arrendador:', error);        
+      }
+    );
+  }
 }
