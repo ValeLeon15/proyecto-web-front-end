@@ -18,7 +18,9 @@
                     <td>{{solicitud.estado}}</td>
                     <td>{{solicitud.fechaFinal}}</td>
                     <td>{{solicitud.fechaInicial}}</td>
-                    <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>                    
+                    <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>      
+                    <td><a href="#" (click)="borrarArrendador(arrendador.id); $event.preventDefault()">Eliminar</a></td>
+              
                     
                 </tr>
             </tbody>
