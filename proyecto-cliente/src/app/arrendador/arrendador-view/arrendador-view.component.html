@@ -19,7 +19,7 @@
                 <td>{{arrendador.apellido}}</td>
                 <td>{{arrendador.correo}}</td>
                 <td>{{arrendador.telefono}}</td>
-                <td><button (click)="borrarArrendador(arrendador.id)">Eliminar</button></td>
+                <td><a href="#" (click)="borrarArrendador(arrendador.id); $event.preventDefault()">Eliminar</a></td>
                 <td><a [routerLink]="['/arrendador/edit', arrendador.id]">Editar</a></td>
             </tr>
         </tbody>
