@@ -15,6 +15,6 @@ export class Propiedad {
         public tienePiscina: Boolean,
         public tieneAsador: Boolean,
         public valorNoche: number,
-        public arrendador: Arrendador 
+        public arrendadorId: number
     ){}
 }

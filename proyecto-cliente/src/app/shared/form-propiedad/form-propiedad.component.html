@@ -41,6 +41,9 @@
     <label for="valorNoche">valor Noche:</label><br>
     <input type="number" id="valorNoche" name="valorNoche" required [(ngModel)]="propiedadCrearOActualizar.valorNoche"><br><br>
 
+    <label for="arrendador">Arrendador</label><br>
+    <input type="number" id="arrendadorId" name="arrendadorId" required [(ngModel)]="propiedadCrearOActualizar.arrendadorId"><br><br>
+
   
     <input *ngIf="esCrear" type="submit" value="Crear propiedad" (click)="crearPropiedad()">
     <input *ngIf="!esCrear"type type="submit" value="Actualizar propiedad" (click)="actualizarPropiedad()">

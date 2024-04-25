@@ -1,31 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Propiedad } from '../../model/propiedad';
 import { PropiedadService } from '../../services/propiedad.service';
+import { ArrendadorService } from '../../services/arrendador.service';
+import { Arrendador } from '../../model/arrendador';
 
 @Component({
   selector: 'app-propiedad-list',
   templateUrl: './propiedad-list.component.html',
-  styleUrl: './propiedad-list.component.css'
+  styleUrls: ['./propiedad-list.component.css']
 })
-export class PropiedadListComponent{
+export class PropiedadListComponent implements OnInit {
 
   propiedades: Propiedad[] = [];
-  arrendadorId: number = 0;
 
   constructor(
     private propiedadService: PropiedadService,
-  ){}
+    private arrendadorService: ArrendadorService
+  ) {}
 
-
-  @Input()
-  set id(id: number) {
-    this.arrendadorId = id;
-    console.log("id", id)
-    this.propiedadService.listarPropiedadesPorArrendador(id).subscribe(
-          propiedades => this.propiedades = propiedades
-        )
-        console.log(this.propiedades)
-      }
+  ngOnInit(): void {
+    this.propiedadService.listarPropiedades().subscribe((propiedades) => {
+      this.propiedades = propiedades;
+    });
   }
-
-
+}
