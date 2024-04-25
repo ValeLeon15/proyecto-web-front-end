@@ -9,25 +9,25 @@ body {
   
   header {
     width: 100%;
-    display: flex;
+    display: flex; 
     align-items: center;
-    background-color: rgb(32, 39, 57);
+    background-color: rgb(65, 20, 29); /*color de la barra*/
     color: #fff;
     padding: 20px;
     position: sticky; /*para que se fije en la parte superior cuando se desplaza hacia abajo*/
   }
   
   nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 15px;
+    display: flex; /*para que los elementos se alineen en una fila*/
+    justify-content: flex-start; /*alinear a la izquierda*/
+    align-items: center; /*centrar los elementos*/
+    padding: 15px; /*espaciado interno*/ 
   }
   
   /*Estilo barra*/
   .link {
     color: white;
-    font-size: 1.2rem;
+    font-size: 30px;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 15px;
@@ -43,6 +43,11 @@ body {
     color: white;
     font-weight: bolder;
   }
+  .logo img{
+    margin-left: 50px;
+    width: 150px; /* Ancho del logotipo */
+    height: auto; /* Para mantener la proporción de aspecto */
+  }
   
   nav {
     flex: 0.9; /*correr el contenido*/
@@ -54,7 +59,7 @@ body {
   /* Estilo para los enlaces del menú desplegable */
   nav a:hover { /*color en el submenu por el link*/
     color: snow;
-    background-color: rgb(39, 150, 172);
+    background-color: rgb(191, 81, 81);
     border-radius: 5px;
     transform: scale(1.20);
   }

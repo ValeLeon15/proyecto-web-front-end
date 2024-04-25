@@ -6,11 +6,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(130, 147, 188); /* Fondo de la pantalla */
+    background-color: #C2B1B4; /* Fondo de la pantalla */
     z-index: -1;  }
   
   .container {
-    background-color: rgb(46, 60, 105); /* Fondo del formulario */
+    background-color: #A16974; /* Fondo del formulario */
     padding: 20px;
     border-radius: 10px; /* Bordes redondeados */
     max-width: 400px; /* Ancho máximo del formulario */
@@ -48,7 +48,7 @@
   }
   
   input[type="submit"] {
-    background-color: #0056b3; /* Color de fondo de los botones */
+    background-color: #47141E; /* Color de fondo de los botones */
     color: white; /* Color del texto de los botones */
     padding: 20px 20px; /* Espaciado interno aumentado para hacer el botón más grande */
     font-size: 20px; /* Tamaño de fuente aumentado */
@@ -59,7 +59,7 @@
   }
 
   input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #61333c;
   }
   
  
