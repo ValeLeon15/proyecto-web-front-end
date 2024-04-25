@@ -8,6 +8,5 @@ import { Arrendador } from '../../model/arrendador';
 })
 export class ArrendadorCreateComponent {
   arrendadorCrear: Arrendador = new Arrendador(0, '', '', '', '', 0);
-  esCrear: boolean = true;
-  
+  esCrear: boolean = true;  
 }

@@ -10,7 +10,6 @@
                 <th>Arrendador</th>
                 <th>Ver</th>
                 <th>Editar</th>
-                <th>Eliminar</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +20,7 @@
                 <td>{{propiedad.valorNoche}}</td>
                 <td>{{propiedad.arrendadorId}}</td>
                 <td><a [routerLink]="['/propiedad/view', propiedad.id]">Ver propiedad</a></td>
-                <td><a [routerLink]="['/propiedad/edit', propiedad.id]">Editar propiedad</a></td>
-                <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Eliminar propiedad</a></td>
+                <td><a [routerLink]="['/propiedad/edit', propiedad.id]">Editar propiedad</a></td>                
             </tr>
         </tbody>
     </table>
@@ -30,5 +28,5 @@
     <div class="no-properties" *ngIf="propiedades.length == 0">
         <h1>El arrendador no tiene propiedades</h1>
     </div>
-    <a [routerLink]="['/propiedad/create']" style="width: 200px;">Crearle una propiedad al arrendador {{arrendadorId}}</a>
+    <a [routerLink]="['/propiedad/create']" style="width: 200px;">Crearle una propiedad al arrendador </a>
 </div>

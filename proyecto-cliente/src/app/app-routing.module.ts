@@ -20,6 +20,7 @@ import { ArrentarioListComponent } from './arrendatario/arrendatario-list/arrend
 import { ArrendatarioCreateComponent } from './arrendatario/arrendatario-create/arrendatario-create.component';
 import { ArrendatarioEditComponent } from './arrendatario/arrendatario-edit/arrendatario-edit.component';
 import { ArrendatarioViewComponent } from './arrendatario/arrendatario-view/arrendatario-view.component';
+import { PropiedadEditComponent } from './propiedad/propiedad-edit/propiedad-edit.component';
 
 const routes: Routes = [
   { path: 'arrendador/list', component: ArrendadorListComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'arrendatario/edit/:id', component: ArrendatarioEditComponent},
 
   { path: 'propiedades/arrendador/:id', component: PropiedadListComponent},
+  { path: 'propiedad/edit/:id', component: PropiedadEditComponent},
   { path: 'propiedad/view/:id', component: PropiedadViewComponent},
   { path: 'propiedad/list', component: PropiedadListComponent},
   { path: 'propiedad/create', component: PropiedadCreateComponent},

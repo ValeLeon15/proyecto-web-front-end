@@ -16,8 +16,8 @@ export class PropiedadService {
     { "Content-Type": "application/json" }
   )
 
-  crearPropiedad(propiedad : Propiedad) : Observable<Propiedad>{
-    return this.http.post<Propiedad>(`${environment.serverUrl}/progrupo14/propiedad`, propiedad, { headers: this.headers })
+  crearPropiedad(propiedad : Propiedad, id : number) : Observable<Propiedad>{
+    return this.http.post<Propiedad>(`${environment.serverUrl}/progrupo14/propiedad/${id}`, propiedad, { headers: this.headers })
   }
 
   actualizarPropiedad(propiedad: Propiedad) : Observable<Propiedad>{ 

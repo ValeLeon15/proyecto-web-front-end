@@ -4,19 +4,18 @@
     <table>
         <thead>
             <tr>
-                <th>nombrePropiedad</th>
-                <th>municipio</th>
-                <th>departamento</th>
-                <th>tipoIngreso</th>
-                <th>descripción</th>
-                <th>cantHabitaciones</th>
-                <th>cantBanos</th>
-                <th>permiteMascotas</th>
-                <th>tienePiscina</th>
-                <th>tieneAsador</th>
-                <th>valorNoche</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Municipio</th>
+                <th>Departamento</th>
+                <th>Ingreso</th>
+                <th>Descripción</th>
+                <th>Habitaciones</th>
+                <th>Banos</th>
+                <th>Mascotas</th>
+                <th>Piscina</th>
+                <th>Asador</th>
+                <th>ValorNoche</th>
             </tr>
         </thead>
         <tbody>
@@ -37,11 +36,10 @@
     </table>
   </div>
 
-  <td><a [routerLink]="['/propiedad/edit', propiedad.id]">Editar propiedad</a></td>
-  <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Eliminar propiedad</a></td>
-  <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Comprar</a></td>
-  <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Agregar fotos</a></td>
-  <td><a [routerLink]="['/propiedad/delete', propiedad.id]">Pagar</a></td>
+  <td><a href="#" (click)="borrarPropiedad(propiedad.id); $event.preventDefault()">Eliminar</a></td>
+  <td><a [routerLink]="['/propiedad/list', propiedad.id]">Comprar</a></td>
+  <td><a [routerLink]="['/propiedad/list', propiedad.id]">Agregar fotos</a></td>
+
 
 
 </div>

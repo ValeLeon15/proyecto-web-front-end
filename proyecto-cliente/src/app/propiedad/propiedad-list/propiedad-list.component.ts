@@ -14,8 +14,7 @@ export class PropiedadListComponent implements OnInit {
   propiedades: Propiedad[] = [];
 
   constructor(
-    private propiedadService: PropiedadService,
-    private arrendadorService: ArrendadorService
+    private propiedadService: PropiedadService,    
   ) {}
 
   ngOnInit(): void {
