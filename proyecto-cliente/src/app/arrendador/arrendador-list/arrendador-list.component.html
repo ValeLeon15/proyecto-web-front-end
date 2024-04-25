@@ -7,7 +7,6 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Ver arrendador</th>
-                <th>Editar arrendador</th> <!-- Nuevo encabezado -->
             </tr>
         </thead>
         <tbody>
@@ -16,7 +15,6 @@
                 <td>{{arrendador.nombre}}</td>
                 <td>{{arrendador.apellido}}</td>
                 <td><a [routerLink]="['/arrendador/view', arrendador.id]">Ver</a></td>
-                <td><a [routerLink]="['/arrendador/edit', arrendador.id]">Editar</a></td> 
             </tr>
         </tbody>
     </table>

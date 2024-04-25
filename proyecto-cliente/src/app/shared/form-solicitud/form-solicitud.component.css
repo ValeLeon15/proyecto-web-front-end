@@ -44,7 +44,7 @@
   input[type="number"]:focus,
   select:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: #A16974;
   }
   
   input[type="submit"] {
