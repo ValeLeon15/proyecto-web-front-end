@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArrendatarioVerComponent } from './arrendatario-view.component';
+import { ArrendatarioViewComponent } from './arrendatario-view.component';
 
 describe('ArrendatarioVerComponent', () => {
-  let component: ArrendatarioVerComponent;
-  let fixture: ComponentFixture<ArrendatarioVerComponent>;
+  let component: ArrendatarioViewComponent;
+  let fixture: ComponentFixture<ArrendatarioViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ArrendatarioVerComponent]
+      declarations: [ArrendatarioViewComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ArrendatarioVerComponent);
+    fixture = TestBed.createComponent(ArrendatarioViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -33,6 +33,7 @@ import { CalificacionCreateComponent } from './calificacion/calificacion-create/
 import { CalificacionEditComponent } from './calificacion/calificacion-edit/calificacion-edit/calificacion-edit.component';
 import { CalificacionListComponent } from './calificacion/calificacion-list/calificacion-list/calificacion-list.component';
 import { CalificacionViewComponent } from './calificacion/calificacion-view/calificacion-view/calificacion-view.component';
+import { FormArrendatarioComponent } from './shared/form-arrendatario/form-arrendatario.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { CalificacionViewComponent } from './calificacion/calificacion-view/cali
       CalificacionEditComponent,
       CalificacionListComponent,
       CalificacionViewComponent,
+      FormArrendatarioComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,16 +6,20 @@
                 <th>id</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Ver arrendatario</th>
+                <th>Editar arrendatario</th> <!-- Nuevo encabezado -->
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let arrendatario of arrendatarios">
-                <td>{{arrendatario.id}}</td>
-                <td>{{arrendatario.nombre}}</td>
-                <td>{{arrendatario.apellido}}</td>
+                <td>{{ arrendatario.id }}</td>
+                <td>{{ arrendatario.nombre }}</td>
+                <td>{{ arrendatario.apellido }}</td>
                 <td><a [routerLink]="['/arrendatario/view', arrendatario.id]">Ver</a></td>
+                <td><a [routerLink]="['/arrendatario/edit', arrendatario.id]">Editar</a></td>
             </tr>
         </tbody>
     </table>
+   
 </div>
-<a [routerLink]="['/arrendatario/create']">Crear una cuenta de arrendatario</a>
+<a [routerLink]="['/arrendatario/create']">Crear cuenta arrendatario</a>

@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ArrendatarioService } from '../../services/arrendatario.service';
-import { Arrendatario } from '../../model/arrendatario';
+import { Component } from '@angular/core';
+import { Arrendatario } from '../../model/arrendatario'; // Asumiendo que existe un modelo para arrendatarios
 
 @Component({
   selector: 'app-arrendatario-create',
   templateUrl: './arrendatario-create.component.html',
-  styleUrl: './arrendatario-create.component.css'
+  styleUrls: ['./arrendatario-create.component.css']
 })
 export class ArrendatarioCreateComponent {
-
-arrendatarioCrear: Arrendatario = new Arrendatario(0, '', '', '', 0, '');
-esCrear: boolean = true;
-
+  arrendatarioCrear: Arrendatario = new Arrendatario(0, '', '', '', 0, ''); // Cambiar a Arrendatario
+  esCrear: boolean = true;
 }
+

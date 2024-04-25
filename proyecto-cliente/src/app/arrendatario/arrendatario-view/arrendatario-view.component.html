@@ -9,8 +9,7 @@
                 <th>Correo</th>
                 <th>Telefono</th>
                 <th>Ver solicitudes de arrendamiento</th>
-                <th>Eliminar arrendatario</th>
-                <th>Ver arrendatario</th>
+                <th>Eliminar arrendatario</th>                
                 <th>Editar arrendatario</th>
             </tr>
         </thead>
@@ -22,8 +21,7 @@
                 <td>{{arrendatario.correo}}</td>
                 <td>{{arrendatario.telefono}}</td>
                 <td><a [routerLink]="['/solicitud-arrendamiento/list', arrendatario.id]">Ver</a></td>
-                <td><a [routerLink]="['/arrendatario/delete', arrendatario.id]">Eliminar</a></td>
-                <td><a [routerLink]="['/arrendatario/view', arrendatario.id]">Ver</a></td>
+                <td><a href="#" (click)="borrarArrendatario(arrendatario.id); $event.preventDefault()">Eliminar</a></td>                
                 <td><a [routerLink]="['/arrendatario/edit', arrendatario.id]">Editar</a></td>
             <!--ya no quiero que se muestre asi, quiero que esta informacion 
                 solo se muestre del usuario que viene de arrendatario list-->
