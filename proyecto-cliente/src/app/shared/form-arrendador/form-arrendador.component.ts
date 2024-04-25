@@ -10,8 +10,7 @@ import { Router } from '@angular/router';
 })
 export class FormArrendadorComponent implements OnInit{
   @Input()
-  arrendador!: Arrendador;
-  arrendadorCrearOActualizar: Arrendador = new Arrendador(0, '', '', '', '', 0);
+  arrendador!: Arrendador;  
 
   mensajeExito: string = '';
   mensajeError: string = '';
@@ -19,44 +18,33 @@ export class FormArrendadorComponent implements OnInit{
   constructor(private arrendadorService: ArrendadorService, private router: Router) { }
   ngOnInit(): void {
     if(!this.arrendador){
-      this.arrendador = this.arrendadorCrearOActualizar;
+      this.arrendador = new Arrendador(0, '', '', '', '', 0);
     }
   }
 
 
   crearArrendador() {
-    console.log('crear Arrendador', this.arrendadorCrearOActualizar);
-    this.arrendadorService.crearArrendador(this.arrendadorCrearOActualizar).subscribe(
+    console.log('crear Arrendador', this.arrendador);
+    this.arrendadorService.crearArrendador(this.arrendador).subscribe(
       arrendador => {
         console.log('Arrendador creado', arrendador);
-        this.arrendadorCrearOActualizar = new Arrendador(0, '', '', '', '', 0);
-      }
-    );
-    }
-    
-  cargarArrendador(id: number) {
-    this.arrendadorService.obtenerArrendadorPorId(id).subscribe(
-      (data: Arrendador) => {
-        this.arrendadorCrearOActualizar = data;
-      },
-      error => {
-        console.error('Error al cargar el arrendador:', error);
+        this.arrendador = new Arrendador(0, '', '', '', '', 0);
       }
     );
   }
-
-    updateArrendador() {
-      console.log("arrendador a actualizar", this.arrendador)
-      this.arrendadorService.actualizarArrendador(this.arrendador).subscribe(
-        response => {
-          this.mensajeExito = 'Arrendador actualizado correctamente.';
-          this.router.navigate(['/arrendador/list']);
-        },
-        error => {
-          this.mensajeError = 'Error al actualizar el arrendador.';
-          console.error('Error al actualizar el arrendador:', error);
-        }
-      );
-    }
+    
+  updateArrendador() {
+    console.log("arrendador a actualizar", this.arrendador)
+    this.arrendadorService.actualizarArrendador(this.arrendador).subscribe(
+      response => {
+        this.mensajeExito = 'Arrendador actualizado correctamente.';
+        this.router.navigate(['/arrendador/list']);
+      },
+      error => {
+        this.mensajeError = 'Error al actualizar el arrendador.';
+        console.error('Error al actualizar el arrendador:', error);
+      }
+    );
+  }
 
 }
