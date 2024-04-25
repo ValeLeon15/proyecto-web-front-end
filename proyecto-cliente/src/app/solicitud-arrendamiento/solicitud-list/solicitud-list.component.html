@@ -8,7 +8,10 @@
                     <th>estado</th>
                     <th>fechaFinal</th>
                     <th>fechaInicial</th>
-                    <th>Propiedad</th>                    
+                    <th>Ver propiedad</th>  
+                    <th>Eliminar</th>                    
+                  
+                    
                 </tr>
             </thead>
             <tbody>
@@ -19,7 +22,7 @@
                     <td>{{solicitud.fechaFinal}}</td>
                     <td>{{solicitud.fechaInicial}}</td>
                     <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>      
-                    <td><a href="#" (click)="borrarArrendador(arrendador.id); $event.preventDefault()">Eliminar</a></td>
+                    <td><a href="#" (click)="borrarSolicitud(solicitud.id); $event.preventDefault()">Eliminar</a></td>
               
                     
                 </tr>

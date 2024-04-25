@@ -37,7 +37,7 @@ export class SolicitudArrendamientoService {
     return this.http.put<solicitudArrendamiento>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento`, solicitud, { headers: this.headers })
   }
 
-  eliminarSolicitud(id: number): Observable<void> {
+  borrarSolicitud(id: number): Observable<void> {
     return this.http.delete<void>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/${id}`)
   }
 }

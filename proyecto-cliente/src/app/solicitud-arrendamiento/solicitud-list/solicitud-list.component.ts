@@ -1,8 +1,7 @@
-import { SolicitudArrendamientoService } from './../../services/solicitud-arrendamiento.service';
 import { solicitudArrendamiento } from './../../model/solicitudArrendamiento';
 import { Component, Input } from '@angular/core';
-import { Router } from 'express';
-import { ArrendatarioService } from '../../services/arrendatario.service';
+import { SolicitudArrendamientoService } from '../../services/solicitud-arrendamiento.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-solicitud-list',
@@ -15,6 +14,7 @@ export class SolicitudListComponent {
   
   constructor(
     private solicitudService: SolicitudArrendamientoService,
+    private router: Router
   ){}
 
   @Input()
@@ -23,6 +23,18 @@ export class SolicitudListComponent {
       solicitudes => {
         this.solicitudes = solicitudes;
         console.log("solicitudes",this.solicitudes);
+      }
+    );
+  }
+
+  borrarSolicitud(id: number) {
+    this.solicitudService.borrarSolicitud(id).subscribe(
+      () => {
+        console.log('Solicitud borrada exitosamente');
+        this.router.navigate(['/arrendador/list']);
+      },
+      error => {
+        console.error('Error al borrar el arrendador:', error);        
       }
     );
   }
