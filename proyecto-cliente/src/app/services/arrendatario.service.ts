@@ -29,8 +29,6 @@ export class ArrendatarioService {
   }
   
 
-  //Como no recibimos nada por parte del servidor una vez solicitamos borrar
-  //un arrendatario, no es necesario retornar nada.
   borrarArrendatario(id: number): Observable<void> {
     return this.http.delete<void>(`${environment.serverUrl}/progrupo14/arrendatarios/${id}`)
   }

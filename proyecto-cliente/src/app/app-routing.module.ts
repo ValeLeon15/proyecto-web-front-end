@@ -24,13 +24,13 @@ import { ArrendatarioViewComponent } from './arrendatario/arrendatario-view/arre
 const routes: Routes = [
   { path: 'arrendador/list', component: ArrendadorListComponent },
   { path: 'arrendador/create', component: ArrendadorCreateComponent },
-  { path: 'arrendador/edit', component: ArrendadorEditComponent},
+  { path: 'arrendador/edit/:id', component: ArrendadorEditComponent},
   { path: 'arrendador/view/:id', component: ArrendadorViewComponent},
 
   { path: 'arrendatario/list', component: ArrentarioListComponent },
   { path: 'arrendatario/create', component: ArrendatarioCreateComponent},
   { path: 'arrendatario/view/:id', component: ArrendatarioViewComponent},
-  { path: 'arrendatario/edit', component: ArrendatarioEditComponent},
+  { path: 'arrendatario/edit/:id', component: ArrendatarioEditComponent},
 
   { path: 'propiedades/arrendador/:id', component: PropiedadListComponent},
   { path: 'propiedad/view/:id', component: PropiedadViewComponent},

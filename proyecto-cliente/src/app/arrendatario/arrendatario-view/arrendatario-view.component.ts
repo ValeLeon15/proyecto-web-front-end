@@ -18,6 +18,8 @@ export class ArrendatarioViewComponent implements OnInit{
 
   ngOnInit(): void {
     const arrendatarioId = this.route.snapshot.params['id']; // Obtén el ID del arrendatario de la URL
-    this.arrendatario = this.arrendatarioService.obtenerArrendatarioPorId(arrendatarioId); // Utiliza el servicio para obtener la información del arrendatario específico
+    this.arrendatario = this.arrendatarioService.obtenerArrendatarioPorId(arrendatarioId);
+      // Utiliza el servicio para obtener la información del arrendatario específico
   }
+  
 }

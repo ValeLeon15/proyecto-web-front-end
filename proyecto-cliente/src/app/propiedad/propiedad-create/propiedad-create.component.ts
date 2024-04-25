@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrl: './propiedad-create.component.css'
 })
 export class PropiedadCreateComponent {
-  propiedadCrear: Propiedad = new Propiedad(0, '', '', '','','', 0,true,true,true,0,0);
+  //propiedadCrear: Propiedad = new Propiedad(0, '', '', '','','', 0,true,true,true,0,0);
   esCrear: boolean = true;
   mostrarFormulario: boolean = false;
 

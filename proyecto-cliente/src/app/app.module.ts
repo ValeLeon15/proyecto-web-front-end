@@ -29,6 +29,10 @@ import { SolicitudCreateComponent } from './solicitud-arrendamiento/solicitud-cr
 import { FormSolicitudComponent } from './shared/form-solicitud/form-solicitud.component';
 import { SubirFotoComponent } from './subir-foto/subir-foto.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { CalificacionCreateComponent } from './calificacion/calificacion-create/calificacion-create/calificacion-create.component';
+import { CalificacionEditComponent } from './calificacion/calificacion-edit/calificacion-edit/calificacion-edit.component';
+import { CalificacionListComponent } from './calificacion/calificacion-list/calificacion-list/calificacion-list.component';
+import { CalificacionViewComponent } from './calificacion/calificacion-view/calificacion-view/calificacion-view.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +65,10 @@ import { FooterComponent } from './shared/footer/footer.component';
       FormSolicitudComponent,
       SubirFotoComponent,
       FooterComponent,
+      CalificacionCreateComponent,
+      CalificacionEditComponent,
+      CalificacionListComponent,
+      CalificacionViewComponent,
   ],
   imports: [
     BrowserModule,

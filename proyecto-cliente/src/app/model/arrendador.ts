@@ -4,7 +4,7 @@ export class Arrendador {
         public nombre: string,
         public apellido: string,
         public correo: string,
-        public telefono: number,
         public contrasena: string,
+        public telefono: number,
     ){}
 }

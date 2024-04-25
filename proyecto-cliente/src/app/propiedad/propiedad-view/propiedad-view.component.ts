@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { PropiedadService } from '../../services/propiedad.service';
 import { Propiedad } from '../../model/propiedad';
+import { Arrendador } from '../../model/arrendador';
 
 @Component({
   selector: 'app-propiedad-view',
@@ -12,7 +13,7 @@ export class PropiedadViewComponent {
 
   }
 
-  propiedad: Propiedad = new Propiedad(0, "", "", "", "", "", 0, false, false, false, 0, 0);
+  propiedad: Propiedad = new Propiedad(0, "", "", "", "", "", 0, 0, false, false, false, 0, new Arrendador(0, '', '', '', '', 0));
   @Input()
   set id(id: number) {
     console.log("id", id)

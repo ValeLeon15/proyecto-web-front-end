@@ -7,7 +7,7 @@ import { Arrendador } from '../../model/arrendador';
   styleUrl: './arrendador-create.component.css'
 })
 export class ArrendadorCreateComponent {
-  arrendadorCrear: Arrendador = new Arrendador(0, '', '', '', 0, '');
+  arrendadorCrear: Arrendador = new Arrendador(0, '', '', '', '', 0);
   esCrear: boolean = true;
   
 }

@@ -3,23 +3,39 @@
 <form action="/submit-your-form-handler" method="POST">
 
     <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required [(ngModel)]="arrendadorCrearOActualizar.nombre"><br><br>
-  
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required [(ngModel)]="arrendador.nombre"><br><br>
+    <div *ngIf="arrendador.nombre.length > 5">
+      <p class = "error">error es mayor a 5</p>
+    </div>
     <label for="apellido">Apellido:</label><br>
-    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required [(ngModel)]="arrendadorCrearOActualizar.apellido"><br><br>
-  
+    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required [(ngModel)]="arrendador.apellido"><br><br>
+    <div *ngIf="arrendador.nombre.length > 5">
+      <p class = "error">error es mayor a 5</p>
+    </div>
+
     <label for="email">Correo electrónico:</label><br>
-    <input type="email" id="email" name="email" placeholder="Email" required [(ngModel)]="arrendadorCrearOActualizar.correo"><br><br>
-  
+    <input type="email" id="email" name="email" placeholder="Email" required [(ngModel)]="arrendador.correo"><br><br>
+    <div *ngIf="arrendador.nombre.length > 5">
+      <p class = "error">error es mayor a 5</p>
+    </div>
+
     <label for="password">Contraseña:</label><br>
-    <input type="password" id="password" name="password" placeholder="Password" required [(ngModel)]="arrendadorCrearOActualizar.contrasena"><br><br>
-  
+    <input type="password" id="password" name="password" placeholder="Password" required [(ngModel)]="arrendador.contrasena"><br><br>
+    <div *ngIf="arrendador.nombre.length > 5">
+      <p class = "error">error es mayor a 5</p>
+    </div>
+
     <label for="telefono">Teléfono:</label><br>
-    <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required [(ngModel)]="arrendadorCrearOActualizar.telefono"><br><br>
-  
-    <input *ngIf="esCrear" type="submit" value="Crear arrendador" (click)="crearArrendador()">
-    <input *ngIf="!esCrear"type type="submit" value="Actualizar arrendador" (click)="updateArrendador()">
-  
+    <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required [(ngModel)]="arrendador.telefono"><br><br>
+    <div *ngIf="arrendador.nombre.length > 5">
+      <p class = "error">error es mayor a 5</p>
+    </div>
+
+    <input *ngIf="arrendador.id == 0" type="submit" value="Crear arrendador" (click)="crearArrendador()">
+    <input *ngIf="arrendador.id != 0"type="submit" value="Actualizar arrendador" (click)="updateArrendador()">
+    <div *ngIf="arrendador.nombre.length > 5">
+      <p class = "error">error es mayor a 5</p>
+    </div>
     
   </form>
 </div>

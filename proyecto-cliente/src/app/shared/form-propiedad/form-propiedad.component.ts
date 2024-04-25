@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Propiedad } from '../../model/propiedad';
 import { PropiedadService } from '../../services/propiedad.service';
+import { Arrendador } from '../../model/arrendador';
 
 @Component({
   selector: 'app-form-propiedad',
@@ -10,7 +11,7 @@ import { PropiedadService } from '../../services/propiedad.service';
 export class FormPropiedadComponent implements OnInit{
   @Input() esCrear: boolean | undefined;
 
-  propiedadCrearOActualizar: Propiedad = new Propiedad(0, '', '', '','','', 0,true,true,true,0,0);
+  propiedadCrearOActualizar: Propiedad = new Propiedad(0, '', '', '','','', 0,0,true,true,false,0, new Arrendador(0, '', '', '', '', 0));
   constructor(private propiedadService:PropiedadService) { }
 
   ngOnInit(): void {
@@ -23,7 +24,7 @@ export class FormPropiedadComponent implements OnInit{
       this.propiedadService.crearPropiedad(this.propiedadCrearOActualizar).subscribe(
         propiedad => {
           console.log('Arrendatario creado', propiedad);
-          this.propiedadCrearOActualizar = new Propiedad(0, '', '', '','','', 0,true,true,true,0,0);
+          this.propiedadCrearOActualizar = new Propiedad(0, '', '', '','','', 0,0,true,true,false,0, new Arrendador(0, '', '', '', '', 0));
         }
       );
       }
@@ -33,7 +34,7 @@ export class FormPropiedadComponent implements OnInit{
         this.propiedadService.actualizarPropiedad(this.propiedadCrearOActualizar).subscribe(
           propiedad => {
             console.log('Propiedad actualizada', propiedad);
-            this.propiedadCrearOActualizar = new Propiedad(0, '', '', '','','', 0,true,true,true,0,0);
+            this.propiedadCrearOActualizar = new Propiedad(0, "", "", "", "", "", 0, 0, false, false, false, 0, new Arrendador(0, '', '', '', '', 0));
           }
         );
       }

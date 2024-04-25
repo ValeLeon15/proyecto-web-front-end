@@ -34,7 +34,7 @@ export class ArrendadorService {
   }
 
   actualizarArrendador(arrendador: Arrendador): Observable<Arrendador> {
-    return this.http.put<Arrendador>(`${environment.serverUrl}/progrupo14/arrendadores/${arrendador.id}`, arrendador, { headers: this.headers });
+    return this.http.put<Arrendador>(`${environment.serverUrl}/progrupo14/arrendadores`, arrendador, { headers: this.headers });
   }
 
 }
