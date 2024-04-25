@@ -21,8 +21,23 @@ export class SolicitudArrendamientoService {
     return this.http.get<solicitudArrendamiento[]>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/arrendatario/${id}`)
   }
 
-  crearSolicitud(solicitud : solicitudArrendamiento) : Observable<solicitudArrendamiento>{
-    return this.http.post<solicitudArrendamiento>(`${environment.serverUrl}/progrupo14/Solicitud`, solicitud, { headers: this.headers })
+  getSolicitudArrendamiento(id: number): Observable<solicitudArrendamiento> {
+    return this.http.get<solicitudArrendamiento>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/${id}`)
   }
 
+  listarSolicitudesArrendamiento(): Observable<solicitudArrendamiento[]> {
+    return this.http.get<solicitudArrendamiento[]>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento`)
+  }
+
+  crearSolicitud(solicitud: solicitudArrendamiento, idPropiedad: number, idArrendatario: number): Observable<solicitudArrendamiento> {
+    return this.http.post<solicitudArrendamiento>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/${idPropiedad}/${idArrendatario}`, solicitud, { headers: this.headers })
+  }
+
+  actualizarSolicitud(solicitud: solicitudArrendamiento): Observable<solicitudArrendamiento> {
+    return this.http.put<solicitudArrendamiento>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento`, solicitud, { headers: this.headers })
+  }
+
+  eliminarSolicitud(id: number): Observable<void> {
+    return this.http.delete<void>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/${id}`)
+  }
 }

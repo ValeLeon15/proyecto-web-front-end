@@ -37,9 +37,7 @@
   </div>
 
   <td><a href="#" (click)="borrarPropiedad(propiedad.id); $event.preventDefault()">Eliminar</a></td>
-  <td><a [routerLink]="['/propiedad/list', propiedad.id]">Comprar</a></td>
+  <td><a [routerLink]="['/solicitudarrendamiento/create', propiedad.id]">Comprar</a></td>
   <td><a [routerLink]="['/propiedad/list', propiedad.id]">Agregar fotos</a></td>
-
-
 
 </div>

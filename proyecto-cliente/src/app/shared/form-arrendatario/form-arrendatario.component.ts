@@ -28,6 +28,7 @@ export class FormArrendatarioComponent implements OnInit {
       arrendatario => {
         console.log('Arrendatario creado:', arrendatario);
         this.arrendatario = new Arrendatario(0, '', '', '', 0, '');
+        this.router.navigate(['/arrendatario/list']);
       },
       error => {
         console.error('Error al crear arrendatario:', error);

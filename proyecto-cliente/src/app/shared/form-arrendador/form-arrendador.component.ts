@@ -29,6 +29,7 @@ export class FormArrendadorComponent implements OnInit{
       arrendador => {
         console.log('Arrendador creado', arrendador);
         this.arrendador = new Arrendador(0, '', '', '', '', 0);
+        this.router.navigate(['/arrendador/list']);
       }
     );
   }

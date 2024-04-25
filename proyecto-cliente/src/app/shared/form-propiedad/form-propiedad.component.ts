@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Propiedad } from '../../model/propiedad';
 import { PropiedadService } from '../../services/propiedad.service';
-import { Arrendador } from '../../model/arrendador';
 import { Router } from '@angular/router';
 
 @Component({
@@ -31,7 +30,7 @@ export class FormPropiedadComponent implements OnInit{
         console.log('Propiedad creada', propiedad);
         this.propiedad = new Propiedad(0, '', '', '', '', '', 0, 0, true, true, false, 0, 0);
         this.mensajeExito = 'Propiedad creada correctamente.';
-        this.router.navigate(['/propiedades']);
+        this.router.navigate(['/propiedad/list']);
       },
       error => {
         this.mensajeError = 'Error al crear la propiedad.';
@@ -45,7 +44,7 @@ export class FormPropiedadComponent implements OnInit{
     this.propiedadService.actualizarPropiedad(this.propiedad).subscribe(
       response => {
         this.mensajeExito = 'Propiedad actualizada correctamente.';
-        this.router.navigate(['/propiedades']);
+        this.router.navigate(['/propiedad/list']);
       },
       error => {
         this.mensajeError = 'Error al actualizar la propiedad.';

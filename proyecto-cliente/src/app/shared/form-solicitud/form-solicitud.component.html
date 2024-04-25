@@ -1,21 +1,28 @@
 <div class="background"></div>
 <div class="container">
-<form action="/submit-your-form-handler" method="POST">
+  <form action="/submit-your-form-handler" method="POST">
 
-    <label for="fechaInicial">Fecha inicial :</label><br>
-    <input type="date" id="fechaInicial" name="fechaInicial" placeholder="Fecha Inicial" required [(ngModel)]="solicitudCrearOActualizar.fechaInicial"><br>
+    <label for="idPropiedad">ID de la Propiedad:</label><br>
+    <input type="number" id="idPropiedad" name="idPropiedad" placeholder="ID de la Propiedad" required 
+           [(ngModel)]="solicitud.idPropiedad"><br><br>
   
-    <label for="fechaFinal">Fecha final:</label><br>
-    <input type="date" id="fechaFinal" name="fechaFinal" placeholder="Departamento" required [(ngModel)]="solicitudCrearOActualizar.fechaFinal"><br>
+    <label for="idUsuarioArrendatario">ID del Usuario Arrendatario:</label><br>
+    <input type="number" id="idUsuarioArrendatario" name="idUsuarioArrendatario" placeholder="ID del Usuario Arrendatario" required [(ngModel)]="solicitud.idUsuarioArrendatario"><br><br>
   
-    <label for="cantPersonas">Cantidad de personas:</label><br>
-    <input type="number" id="cantPersonas" name="cantPersonas" required [(ngModel)]="solicitudCrearOActualizar.cantPersonas"><br>
+    <label for="fechaInicial">Fecha Inicial:</label><br>
+    <input type="date" id="fechaInicial" name="fechaInicial" required [(ngModel)]="solicitud.fechaInicial"><br><br>
   
+    <label for="fechaFinal">Fecha Final:</label><br>
+    <input type="date" id="fechaFinal" name="fechaFinal" required [(ngModel)]="solicitud.fechaFinal"><br><br>
+  
+    <label for="cantPersonas">Cantidad de Personas:</label><br>
+    <input type="number" id="cantPersonas" name="cantPersonas" required [(ngModel)]="solicitud.cantPersonas"><br><br>
+
     <label for="estado">Estado:</label><br>
-    <select id="estado" name="estado" required [(ngModel)]="solicitudCrearOActualizar.estado">
-      <option value="true">Sí</option>
-      <option value="false">No</option>
-    </select><br>
-    <input type="submit" value="Crear solicitud">
+    <input type="text" id="estado" name="estado" placeholder="Estado" required [(ngModel)]="solicitud.estado"><br><br>
+  
+    <input *ngIf="solicitud.id == 0" type="submit" value="Crear solicitud de arrendamiento" (click)="crearSolicitud()">
+    <input *ngIf="solicitud.id != 0" type="submit" value="Actualizar solicitud de arrendamiento" (click)="actualizarSolicitud()">
+      
   </form>
 </div>

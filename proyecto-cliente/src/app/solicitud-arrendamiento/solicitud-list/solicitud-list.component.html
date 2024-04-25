@@ -23,14 +23,12 @@
                     <td>{{solicitud.fechaInicial}}</td>
                     <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>
                     <td><a [routerLink]="['/solicitudarrendamiento/view', solicitud.id]">Ver solicitud</a></td>
-                    <td><a [routerLink]="['/solicitudarrendamiento/edit', solicitud.id]">Eliminar solicitud</a></td>
-                    <td><a [routerLink]="['/solicitudarrendamiento/delete', solicitud.id]">Eliminar solicitud</a></td>
+                    
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="no-properties" *ngIf="solicitudes.length <= 0">
         <h1>El arrendatario no tiene solicitudes de arrendamiento</h1>
-    </div>
-    <a [routerLink]="['/solicitudarrendamiento/create']">Crearle una solicitud al arrendatario {{arrendatarioId}}</a>
+    </div>    
 </div>

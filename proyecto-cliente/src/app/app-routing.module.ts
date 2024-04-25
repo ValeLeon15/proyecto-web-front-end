@@ -40,8 +40,8 @@ const routes: Routes = [
   { path: 'propiedad/create', component: PropiedadCreateComponent},
 
   { path: 'solicitudarrendamiento/list', component: SolicitudListComponent},
-  { path: 'solicitudarrendamiento/create', component: SolicitudCreateComponent},
-  { path: 'solicitudarrendamiento/arrendatario/:id', component: SolicitudListComponent},
+  { path: 'solicitudarrendamiento/create/:id', component: SolicitudCreateComponent},
+  { path: 'solicitudarrendamiento/arrendatario/:id', component: SolicitudListComponent},  
   { path: '', pathMatch: 'full', redirectTo: 'arrendatarios/list' }, //siempre va a redirigir a arrendatarios/list cuando no se ponga nada como path en la url
 ];
 
