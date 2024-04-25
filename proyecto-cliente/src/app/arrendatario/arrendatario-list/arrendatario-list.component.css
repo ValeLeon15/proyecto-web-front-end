@@ -31,7 +31,7 @@ th, td {
 }
 
 th {
-  background-color: #1c4478; /* Color de fondo del encabezado */
+  background-color: #A16974; /* Color de fondo del encabezado */
   color: white; /* Color del texto del encabezado */
 }
 
@@ -44,7 +44,7 @@ a {
   width: 200px;
   margin: 20px auto;
   text-align: center;
-  background-color: #007bff; /* Color de fondo del enlace */
+  background-color: #662C38; /* Color de fondo del enlace */
   color: white; /* Color del texto del enlace */
   padding: 10px;
   border-radius: 5px; /* Bordes redondos */
@@ -52,5 +52,5 @@ a {
 }
 
 a:hover {
-  background-color: #04305e; /* Color de fondo al pasar el ratón */
+  background-color: #391d23; /* Color de fondo al pasar el ratón */
 }
