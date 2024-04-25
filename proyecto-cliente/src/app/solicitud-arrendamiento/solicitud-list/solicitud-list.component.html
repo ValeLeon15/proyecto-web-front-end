@@ -8,10 +8,7 @@
                     <th>estado</th>
                     <th>fechaFinal</th>
                     <th>fechaInicial</th>
-                    <th>Propiedad</th>
-                    <th>Ver</th>
-                    <th>Editar</th>
-                    <th>Eliminar</th>
+                    <th>Propiedad</th>                    
                 </tr>
             </thead>
             <tbody>
@@ -21,8 +18,7 @@
                     <td>{{solicitud.estado}}</td>
                     <td>{{solicitud.fechaFinal}}</td>
                     <td>{{solicitud.fechaInicial}}</td>
-                    <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>
-                    <td><a [routerLink]="['/solicitudarrendamiento/view', solicitud.id]">Ver solicitud</a></td>
+                    <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>                    
                     
                 </tr>
             </tbody>

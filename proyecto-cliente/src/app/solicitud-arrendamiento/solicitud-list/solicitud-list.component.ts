@@ -12,17 +12,14 @@ import { ArrendatarioService } from '../../services/arrendatario.service';
 export class SolicitudListComponent {
 
   solicitudes: solicitudArrendamiento[] = [];
-  arrendatarioId: number = 0;
-
+  
   constructor(
     private solicitudService: SolicitudArrendamientoService,
   ){}
 
   @Input()
   set id(id: number) {
-    this.arrendatarioId = id;
-    console.log("id", id)
-    this.solicitudService.listarSolicitudesPorArrendatario(id).subscribe(
+    this.solicitudService.listarSolicitudesArrendamiento().subscribe(
       solicitudes => {
         this.solicitudes = solicitudes;
         console.log("solicitudes",this.solicitudes);
