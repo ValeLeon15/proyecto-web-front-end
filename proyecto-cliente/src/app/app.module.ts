@@ -34,6 +34,8 @@ import { CalificacionEditComponent } from './calificacion/calificacion-edit/cali
 import { CalificacionListComponent } from './calificacion/calificacion-list/calificacion-list/calificacion-list.component';
 import { CalificacionViewComponent } from './calificacion/calificacion-view/calificacion-view/calificacion-view.component';
 import { FormArrendatarioComponent } from './shared/form-arrendatario/form-arrendatario.component';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +73,8 @@ import { FormArrendatarioComponent } from './shared/form-arrendatario/form-arren
       CalificacionListComponent,
       CalificacionViewComponent,
       FormArrendatarioComponent,
+      LoginComponent,
+      RegistroComponent,
   ],
   imports: [
     BrowserModule,
