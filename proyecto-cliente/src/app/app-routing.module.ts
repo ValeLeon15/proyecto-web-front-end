@@ -1,7 +1,10 @@
-
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+// Importa el componente LoginComponent si no está importado
+import { LoginComponent } from './login/login.component'; // Asegúrate de importar correctamente el componente de inicio de sesión
+import { RegistroComponent } from './registro/registro.component'; // Asegúrate de importar correctamente el componente de registro
+
 
 import { SolicitudListComponent } from './solicitud-arrendamiento/solicitud-list/solicitud-list.component';
 import { SolicitudCreateComponent } from './solicitud-arrendamiento/solicitud-create/solicitud-create.component';
@@ -42,14 +45,18 @@ const routes: Routes = [
   { path: 'solicitudarrendamiento/list', component: SolicitudListComponent},
   { path: 'solicitudarrendamiento/create/:id', component: SolicitudCreateComponent},
   { path: 'solicitudarrendamiento/arrendatario/:id', component: SolicitudListComponent},  
-  { path: '', pathMatch: 'full', redirectTo: 'arrendatarios/list' }, //siempre va a redirigir a arrendatarios/list cuando no se ponga nada como path en la url
+
+  { path: 'login', component: LoginComponent }, // Agrega esta línea para la ruta de inicio de sesión
+  { path: 'registro', component: RegistroComponent }, // Ruta al componente de registro
+
+  { path: '', pathMatch: 'full', redirectTo: 'login' }, // Redirige a la ruta de inicio de sesión cuando la URL está vacía
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,
     {
-      bindToComponentInputs: true, // Para poder usar @Input en rutas https://angular.io/guide/router
-      onSameUrlNavigation: 'reload' // https://stackoverflow.com/a/52512361
+      bindToComponentInputs: true,
+      onSameUrlNavigation: 'reload'
     })], 
   exports: [RouterModule]
 })

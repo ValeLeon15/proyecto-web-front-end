@@ -29,7 +29,8 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
-input[type="submit"] {
+input[type="submit"],
+select { /* Agrega estilos para el menú desplegable */
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -37,6 +38,16 @@ input[type="submit"] {
     border: 2px solid #050404;
     border-radius: 5px; /* Bordes redondos */
     box-sizing: border-box;
+}
+
+select {
+    margin-bottom: 10px; /* Agrega un margen inferior al menú desplegable */
+    background-color: #A16974; /* Color de fondo */
+}
+
+select:hover { /* Cambia el color y agrega sombreado al pasar el mouse */
+    background-color: #B58989; /* Color de fondo más claro */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombreado */
 }
 
 input[type="submit"] {

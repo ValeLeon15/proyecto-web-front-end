@@ -4,52 +4,51 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #C2B1B4; /* Fondo de la pantalla */
+    background-color: #5c2c2f; /* Vino tinto oscuro */
     z-index: -1;
-}
-
-.container {
-    background-color: #A16974; /* Fondo del formulario */
+  }
+  
+  .container {
+    background-color: #7c4b50; /* Vino tinto claro */
     padding: 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    max-width: 400px; /* Ancho máximo del formulario */
-    margin: 0 auto; /* Centrar horizontalmente */
-}
-
-form {
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form {
     text-align: center;
     font-size: 30px;
-}
-
-label {
-    color: white; /* Color del texto de las etiquetas */
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="submit"] {
+  }
+  
+  label {
+    color: white;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 2px solid #050404;
-    border-radius: 5px; /* Bordes redondos */
+    border: 2px solid #3d1a1d; /* Vino tinto oscuro */
+    border-radius: 5px;
     box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #47141E; /* Color de fondo de los botones */
-    color: white; /* Color del texto de los botones */
-    padding: 20px 20px; /* Espaciado interno aumentado para hacer el botón más grande */
-    font-size: 20px; /* Tamaño de fuente aumentado */
+  }
+  
+  input[type="submit"] {
+    background-color: #5c2c2f; /* Vino tinto oscuro */
+    color: white;
+    padding: 20px 20px;
+    font-size: 20px;
     cursor: pointer;
-    border: none; /* Sin borde */
-    display: block; /* Convertir a bloque para centrarlo */
-    margin: 0 auto; /* Centrar horizontalmente */
-}
-
-input[type="submit"]:hover {
-    background-color: #61333c; /* Color de fondo al pasar el ratón */
-}
+    border: none;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #7c4b50; /* Vino tinto claro */
+  }
+  
