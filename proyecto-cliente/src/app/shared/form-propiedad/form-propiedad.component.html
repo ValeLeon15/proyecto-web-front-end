@@ -20,7 +20,7 @@
     <label for="cantHabitaciones">Cantidad Habitaciones:</label><br>
     <input type="number" id="cantHabitaciones" name="cantHabitaciones" required [(ngModel)]="propiedad.cantHabitaciones"><br><br>
   
-    <label for="cantBanos">Cantidad Habitaciones:</label><br>
+    <label for="cantBanos">Cantidad Banos:</label><br>
     <input type="number" id="cantBanos" name="cantBanos" required [(ngModel)]="propiedad.cantBanos"><br><br>
 
     <label for="permiteMascotas">Permite mascotas:</label><br>
@@ -45,7 +45,7 @@
     <input type="number" id="valorNoche" name="valorNoche" required [(ngModel)]="propiedad.valorNoche"><br><br>
 
     <label for="arrendadorId">ID del Arrendador:</label><br>
-    <input type="number" id="arrendadorId" name="arrendadorId" placeholder="ID del arrendador" required [(ngModel)]="propiedad.arrendadorId"><br><br>
+    <input type="number" id="arrendadorId" name="arrendadorId" placeholder="ID del arrendador" required [(ngModel)]="propiedad.arrendadorId" disabled><br><br>
   
     <input *ngIf="propiedad.id == 0" type="submit" value="Crear propiedad" (click)="crearPropiedad()">
     <input *ngIf="propiedad.id != 0"type="submit" value="Actualizar propiedad" (click)="actualizarPropiedad()">

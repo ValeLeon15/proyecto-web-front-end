@@ -19,7 +19,8 @@ export class SolicitudListComponent {
 
   @Input()
   set id(id: number) {
-    this.solicitudService.listarSolicitudesArrendamiento().subscribe(
+    console.log("id", id);
+    this.solicitudService.listarSolicitudesPorArrendatario(id).subscribe(
       solicitudes => {
         this.solicitudes = solicitudes;
         console.log("solicitudes",this.solicitudes);

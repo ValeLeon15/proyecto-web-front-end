@@ -9,26 +9,27 @@
     <div class="background"></div>
     <div class="container">
         <h2>Registro</h2>
-        <form>
+        <form (ngSubmit)="register()">
             <label for="tipoUsuario">¿Desea registrarse como?</label>
-            <select id="tipoUsuario" name="tipoUsuario">
+            <select id="tipoUsuario" name="tipoUsuario" [(ngModel)]="registerDto.tipo">
                 <option value="arrendador">Arrendador</option>
                 <option value="arrendatario">Arrendatario</option>
             </select>
+
             <label for="nombres">Nombres <span>*</span></label>
-            <input type="text" id="nombres" name="nombres" required>
+            <input type="text" id="nombres" name="nombres" required [(ngModel)]="registerDto.nombre">
             
             <label for="apellidos">Apellidos <span>*</span></label>
-            <input type="text" id="apellidos" name="apellidos" required>
+            <input type="text" id="apellidos" name="apellidos" required [(ngModel)]="registerDto.apellido">
             
             <label for="email">Correo electrónico <span>*</span></label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required [(ngModel)]="registerDto.correo">
             
             <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono">
+            <input type="tel" id="telefono" name="telefono" [(ngModel)]="registerDto.telefono">
             
             <label for="password">Contraseña <span>*</span></label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required [(ngModel)]="registerDto.contrasena">
             
             <input type="submit" value="Registrarse">
         </form>

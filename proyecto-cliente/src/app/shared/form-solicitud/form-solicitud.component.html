@@ -3,11 +3,11 @@
   <form action="/submit-your-form-handler" method="POST">
 
     <label for="idPropiedad">ID de la Propiedad:</label><br>
-    <input type="number" id="idPropiedad" name="idPropiedad" placeholder="ID de la Propiedad" required 
+    <input type="number" id="idPropiedad" name="idPropiedad" placeholder="ID de la Propiedad" disabled 
            [(ngModel)]="solicitud.idPropiedad"><br><br>
   
     <label for="idUsuarioArrendatario">ID del Usuario Arrendatario:</label><br>
-    <input type="number" id="idUsuarioArrendatario" name="idUsuarioArrendatario" placeholder="ID del Usuario Arrendatario" required [(ngModel)]="solicitud.idUsuarioArrendatario"><br><br>
+    <input type="number" id="idUsuarioArrendatario" name="idUsuarioArrendatario" placeholder="ID del Usuario Arrendatario" required [(ngModel)]="userId" disabled><br><br>
   
     <label for="fechaInicial">Fecha Inicial:</label><br>
     <input type="date" id="fechaInicial" name="fechaInicial" required [(ngModel)]="solicitud.fechaInicial"><br><br>

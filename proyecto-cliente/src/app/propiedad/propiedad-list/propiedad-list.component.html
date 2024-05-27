@@ -9,6 +9,7 @@
                 <th>valorNoche</th>
                 <th>Arrendador</th>
                 <th>Ver</th>
+                <th>Solicitar un arriendo</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
                 <td>{{propiedad.valorNoche}}</td>
                 <td>{{propiedad.arrendadorId}}</td>
                 <td><a [routerLink]="['/propiedad/view', propiedad.id]">Ver propiedad</a></td>
+                <td><a [routerLink]="['/solicitudarrendamiento/create', propiedad.id]">Solicitar arriendo</a></td>
             </tr>
         </tbody>
     </table>

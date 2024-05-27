@@ -1,45 +1,47 @@
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Name group</title>
 </head>
+
 <body>
   <header>
     <div class="logo">
-     <img src="assets/logo.png" alt="Nombre del logo">
+      <img src="assets/logo.png" alt="Nombre del logo">
     </div>
-    <nav> <!-- barra de inicio-->
-      <div class ="link">
-        <a [routerLink]="['/arrendatario/list']" class = "link">Arrendatario</a> 
+    <nav *ngIf="userId != 0"> <!-- barra de inicio-->
+      <div class="link">
+        <a *ngIf="userRole === 'ARRENDATARIO'" [routerLink]="['/arrendatario/list']" class="link">Arrendatario</a>
         <div class="submenu">
-              <a [routerLink]="['/arrendatario/list']">Listar arrendatarios</a>
-              <a [routerLink]="['/arrendatario/create']">Crear un nuevo arrendatario</a>
-        </div> 
+          <a [routerLink]="['/arrendatario/list']">Listar arrendatarios</a>
+          <a [routerLink]="['/arrendatario/create']">Crear un nuevo arrendatario</a>
+        </div>
       </div>
 
-      <div class ="link">
-          <a [routerLink]="['/arrendador/list']" class="link">Arrendador</a>
-          <div class="submenu">
-               <a [routerLink]="['/arrendador/list']">Listar arrendadores</a>
-               <a [routerLink]="['/arrendador/create']">Crear un nuevo arrendador</a>
-          </div>     
+      <div class="link">
+        <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/arrendador/list']" class="link">Arrendador</a>
+        <div class="submenu">
+          <a [routerLink]="['/arrendador/list']">Listar arrendadores</a>
+          <a [routerLink]="['/arrendador/create']">Crear un nuevo arrendador</a>
+        </div>
       </div>
 
-      <div class ="link">
-        <a [routerLink]="['/propiedad/list']" class="link">Propiedad</a>
+      <div class="link">
+        <a [routerLink]="['/propiedades/arrendador/', userId]" class="link">Propiedad</a>
         <div class="submenu">
-             <a [routerLink]="['/propiedad/list']">Listar propiedades</a>
-             <a [routerLink]="['/propiedad/create']">Crear propiedades</a>
-             <a [routerLink]="['/solicitudarrendamiento/list']">Listar solicitudes</a>
-        </div>     
-    </div>
+          <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/propiedades/arrendador/', userId]">Listar mis
+            propiedades</a>
+          <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/propiedad/create']">Crear una propiedad</a>
+          <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/solicitudarrendamiento/arrendador/', userId]">Listar mis
+            solicitudes de arriendo</a>
+          <a *ngIf="userRole === 'ARRENDATARIO'" [routerLink]="['/solicitudarrendamiento/arrendatario/', userId]">Listar
+            mis solicitudes de arriendo</a>
+          <a *ngIf="userRole === 'ARRENDATARIO'" [routerLink]="['/propiedad/list']">Buscar propiedades</a>
+        </div>
+      </div>
+      <div class="link" style="cursor: pointer;">
+        <a (click)="logout()" class="link">Salir</a>
+      </div>
     </nav>
   </header>
-
-  <main>
-    <!-- Content goes here -->
- 
-  </main>
 </body>
-

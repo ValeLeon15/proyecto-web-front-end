@@ -24,27 +24,28 @@ import { ArrendatarioCreateComponent } from './arrendatario/arrendatario-create/
 import { ArrendatarioEditComponent } from './arrendatario/arrendatario-edit/arrendatario-edit.component';
 import { ArrendatarioViewComponent } from './arrendatario/arrendatario-view/arrendatario-view.component';
 import { PropiedadEditComponent } from './propiedad/propiedad-edit/propiedad-edit.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'arrendador/list', component: ArrendadorListComponent },
-  { path: 'arrendador/create', component: ArrendadorCreateComponent },
-  { path: 'arrendador/edit/:id', component: ArrendadorEditComponent},
-  { path: 'arrendador/view/:id', component: ArrendadorViewComponent},
+  { path: 'arrendador/list', component: ArrendadorListComponent, canActivate: [AuthGuard] },
+  { path: 'arrendador/create', component: ArrendadorCreateComponent , canActivate: [AuthGuard]},
+  { path: 'arrendador/edit/:id', component: ArrendadorEditComponent, canActivate: [AuthGuard]},
+  { path: 'arrendador/view/:id', component: ArrendadorViewComponent, canActivate: [AuthGuard]},
 
-  { path: 'arrendatario/list', component: ArrentarioListComponent },
-  { path: 'arrendatario/create', component: ArrendatarioCreateComponent},
-  { path: 'arrendatario/view/:id', component: ArrendatarioViewComponent},
-  { path: 'arrendatario/edit/:id', component: ArrendatarioEditComponent},
+  { path: 'arrendatario/list', component: ArrentarioListComponent, canActivate: [AuthGuard] },
+  { path: 'arrendatario/create', component: ArrendatarioCreateComponent, canActivate: [AuthGuard]},
+  { path: 'arrendatario/view/:id', component: ArrendatarioViewComponent, canActivate: [AuthGuard]},
+  { path: 'arrendatario/edit/:id', component: ArrendatarioEditComponent, canActivate: [AuthGuard]},
 
-  { path: 'propiedades/arrendador/:id', component: PropiedadListComponent},
-  { path: 'propiedad/edit/:id', component: PropiedadEditComponent},
-  { path: 'propiedad/view/:id', component: PropiedadViewComponent},
-  { path: 'propiedad/list', component: PropiedadListComponent},
-  { path: 'propiedad/create', component: PropiedadCreateComponent},
+  { path: 'propiedades/arrendador/:id', component: PropiedadListComponent, canActivate: [AuthGuard]},
+  { path: 'propiedad/edit/:id', component: PropiedadEditComponent, canActivate: [AuthGuard]},
+  { path: 'propiedad/view/:id', component: PropiedadViewComponent, canActivate: [AuthGuard]},
+  { path: 'propiedad/list', component: PropiedadListComponent, canActivate: [AuthGuard]},
+  { path: 'propiedad/create', component: PropiedadCreateComponent, canActivate: [AuthGuard]},
 
-  { path: 'solicitudarrendamiento/list', component: SolicitudListComponent},
-  { path: 'solicitudarrendamiento/create/:id', component: SolicitudCreateComponent},
-  { path: 'solicitudarrendamiento/arrendatario/:id', component: SolicitudListComponent},  
+  { path: 'solicitudarrendamiento/list', component: SolicitudListComponent, canActivate: [AuthGuard]},
+  { path: 'solicitudarrendamiento/create/:id', component: SolicitudCreateComponent, canActivate: [AuthGuard]},
+  { path: 'solicitudarrendamiento/arrendatario/:id', component: SolicitudListComponent, canActivate: [AuthGuard]},  
 
   { path: 'login', component: LoginComponent }, // Agrega esta línea para la ruta de inicio de sesión
   { path: 'registro', component: RegistroComponent }, // Ruta al componente de registro

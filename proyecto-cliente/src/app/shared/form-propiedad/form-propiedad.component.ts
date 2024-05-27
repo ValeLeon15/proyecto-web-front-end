@@ -14,11 +14,14 @@ export class FormPropiedadComponent implements OnInit{
 
   mensajeExito: string = '';
   mensajeError: string = '';
+  userId = 0;
 
   constructor(private propiedadService: PropiedadService, private router: Router) { }
   ngOnInit(): void {
+    this.userId = +sessionStorage.getItem('user-id')!;
+    console.log(this.userId)
     if (!this.propiedad) {
-      this.propiedad = new Propiedad(0, '', '', '', '', '', 0, 0, true, true, false, 0, 0);
+      this.propiedad = new Propiedad(0, '', '', '', '', '', 0, 0, true, true, false, 0, this.userId);
     }
   }
 
@@ -30,7 +33,7 @@ export class FormPropiedadComponent implements OnInit{
         console.log('Propiedad creada', propiedad);
         this.propiedad = new Propiedad(0, '', '', '', '', '', 0, 0, true, true, false, 0, 0);
         this.mensajeExito = 'Propiedad creada correctamente.';
-        this.router.navigate(['/propiedad/list']);
+        this.router.navigate(['propiedades/arrendador/', this.userId]);
       },
       error => {
         this.mensajeError = 'Error al crear la propiedad.';

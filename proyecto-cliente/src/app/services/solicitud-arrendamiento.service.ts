@@ -8,7 +8,6 @@ import { solicitudArrendamiento } from '../model/solicitudArrendamiento';
   providedIn: 'root'
 })
 export class SolicitudArrendamientoService {
-
   constructor(
     private http: HttpClient
   ) { }
