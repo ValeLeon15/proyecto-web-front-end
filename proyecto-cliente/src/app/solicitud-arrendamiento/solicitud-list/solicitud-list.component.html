@@ -8,8 +8,8 @@
                     <th>estado</th>
                     <th>fechaFinal</th>
                     <th>fechaInicial</th>
-                    <th>Ver propiedad</th>  
-                    <th>Eliminar</th>                    
+                    <th >Ver propiedad</th>  
+                    <th *ngIf="userRole === 'ARRENDADOR'">Eliminar</th>        
                   
                     
                 </tr>
@@ -22,7 +22,7 @@
                     <td>{{solicitud.fechaFinal}}</td>
                     <td>{{solicitud.fechaInicial}}</td>
                     <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>      
-                    <td><a href="#" (click)="borrarSolicitud(solicitud.id); $event.preventDefault()">Eliminar</a></td>              
+                    <td><a *ngIf="userRole === 'ARRENDADOR'" href="#" (click)="borrarSolicitud(solicitud.id); $event.preventDefault()">Eliminar</a></td>              
                     
                 </tr>
             </tbody>
