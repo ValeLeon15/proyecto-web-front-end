@@ -3,7 +3,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>id</th>
+                    <th>id</th>                    
                     <th>cantPersonas</th>
                     <th>estado</th>
                     <th>fechaFinal</th>
@@ -16,14 +16,13 @@
             </thead>
             <tbody>
                 <tr *ngFor="let solicitud of solicitudes">
-                    <td>{{solicitud.id}}</td>
+                    <td>{{solicitud.id}}</td>                    
                     <td>{{solicitud.cantPersonas}}</td>
                     <td>{{solicitud.estado}}</td>
                     <td>{{solicitud.fechaFinal}}</td>
                     <td>{{solicitud.fechaInicial}}</td>
                     <td><a [routerLink]="['/propiedad/view', solicitud.idPropiedad]">Ver propiedad</a></td>      
-                    <td><a href="#" (click)="borrarSolicitud(solicitud.id); $event.preventDefault()">Eliminar</a></td>
-              
+                    <td><a href="#" (click)="borrarSolicitud(solicitud.id); $event.preventDefault()">Eliminar</a></td>              
                     
                 </tr>
             </tbody>

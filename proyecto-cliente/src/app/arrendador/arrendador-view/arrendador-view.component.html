@@ -7,8 +7,7 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo</th>
-                <th>Telefono</th>
-                <th>Eliminar arrendador</th>
+                <th>Telefono</th>                
                 <th>Editar arrendador</th>
             </tr>
         </thead>
@@ -19,7 +18,7 @@
                 <td>{{arrendador.apellido}}</td>
                 <td>{{arrendador.correo}}</td>
                 <td>{{arrendador.telefono}}</td>
-                <td><a href="#" (click)="borrarArrendador(arrendador.id); $event.preventDefault()">Eliminar</a></td>
+                
                 <td><a [routerLink]="['/arrendador/edit', arrendador.id]">Editar</a></td>
             </tr>
         </tbody>

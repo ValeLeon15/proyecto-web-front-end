@@ -20,6 +20,10 @@ export class SolicitudArrendamientoService {
     return this.http.get<solicitudArrendamiento[]>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/arrendatario/${id}`)
   }
 
+  listarSolicitudesPorPropiedad(id: number): Observable<solicitudArrendamiento[]> {
+    return this.http.get<solicitudArrendamiento[]>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/propiedad/${id}`)
+  }
+
   getSolicitudArrendamiento(id: number): Observable<solicitudArrendamiento> {
     return this.http.get<solicitudArrendamiento>(`${environment.serverUrl}/progrupo14/solicitudarrendamiento/${id}`)
   }

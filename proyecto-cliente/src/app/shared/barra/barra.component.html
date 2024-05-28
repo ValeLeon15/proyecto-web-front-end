@@ -13,16 +13,14 @@
       <div class="link">
         <a *ngIf="userRole === 'ARRENDATARIO'" [routerLink]="['/arrendatario/list']" class="link">Arrendatario</a>
         <div class="submenu">
-          <a [routerLink]="['/arrendatario/list']">Listar arrendatarios</a>
-          <a [routerLink]="['/arrendatario/create']">Crear un nuevo arrendatario</a>
+          <a [routerLink]="['/arrendatario/list']">Listar arrendatarios</a>          
         </div>
       </div>
 
       <div class="link">
         <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/arrendador/list']" class="link">Arrendador</a>
         <div class="submenu">
-          <a [routerLink]="['/arrendador/list']">Listar arrendadores</a>
-          <a [routerLink]="['/arrendador/create']">Crear un nuevo arrendador</a>
+          <a [routerLink]="['/arrendador/list']">Listar arrendadores</a>          
         </div>
       </div>
 
@@ -32,7 +30,7 @@
           <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/propiedades/arrendador/', userId]">Listar mis
             propiedades</a>
           <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/propiedad/create']">Crear una propiedad</a>
-          <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/solicitudarrendamiento/arrendador/', userId]">Listar mis
+          <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/solicitudarrendamiento/arrendatario/', userId]">Listar mis
             solicitudes de arriendo</a>
           <a *ngIf="userRole === 'ARRENDATARIO'" [routerLink]="['/solicitudarrendamiento/arrendatario/', userId]">Listar
             mis solicitudes de arriendo</a>

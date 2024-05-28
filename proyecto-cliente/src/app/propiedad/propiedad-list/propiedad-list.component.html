@@ -28,5 +28,5 @@
     <div class="no-properties" *ngIf="propiedades.length == 0">
         <h1>El arrendador no tiene propiedades</h1>
     </div>
-    <a [routerLink]="['/propiedad/create']" style="width: 200px;">Crearle una propiedad al arrendador </a>
+    <a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/propiedad/create']" style="width: 200px;">Crearle una propiedad al arrendador </a>
 </div>

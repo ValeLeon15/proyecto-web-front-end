@@ -36,10 +36,9 @@
     </table>
   </div>
 
-  <td><a href="#" (click)="borrarPropiedad(propiedad.id); $event.preventDefault()">Eliminar</a></td>
-  <td><a [routerLink]="['/solicitudarrendamiento/create', propiedad.id]">Comprar</a></td>
-  <td><a [routerLink]="['/propiedad/list', propiedad.id]">Agregar fotos</a></td>
-  <td><a [routerLink]="['/propiedad/edit', propiedad.id]">Editar propiedad</a></td>                
+  <td><a *ngIf="userRole === 'ARRENDADOR'"  href="#" (click)="borrarPropiedad(propiedad.id); $event.preventDefault()">Eliminar</a></td>
+  <td><a *ngIf="userRole === 'ARRENDATARIO'" [routerLink]="['/solicitudarrendamiento/create', propiedad.id]">Comprar</a></td>  
+  <td><a *ngIf="userRole === 'ARRENDADOR'" [routerLink]="['/propiedad/edit', propiedad.id]">Editar propiedad</a></td>                
 
 
 </div>

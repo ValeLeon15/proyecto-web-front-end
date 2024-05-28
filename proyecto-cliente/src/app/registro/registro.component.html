@@ -1,38 +1,44 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-</head>
-<body>
-    <div class="background"></div>
-    <div class="container">
-        <h2>Registro</h2>
-        <form (ngSubmit)="register()">
-            <label for="tipoUsuario">¿Desea registrarse como?</label>
-            <select id="tipoUsuario" name="tipoUsuario" [(ngModel)]="registerDto.tipo">
-                <option value="arrendador">Arrendador</option>
-                <option value="arrendatario">Arrendatario</option>
-            </select>
+<!-- registro.component.html -->
 
-            <label for="nombres">Nombres <span>*</span></label>
-            <input type="text" id="nombres" name="nombres" required [(ngModel)]="registerDto.nombre">
-            
-            <label for="apellidos">Apellidos <span>*</span></label>
-            <input type="text" id="apellidos" name="apellidos" required [(ngModel)]="registerDto.apellido">
-            
-            <label for="email">Correo electrónico <span>*</span></label>
-            <input type="email" id="email" name="email" required [(ngModel)]="registerDto.correo">
-            
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" [(ngModel)]="registerDto.telefono">
-            
-            <label for="password">Contraseña <span>*</span></label>
-            <input type="password" id="password" name="password" required [(ngModel)]="registerDto.contrasena">
-            
-            <input type="submit" value="Registrarse">
-        </form>
-    </div>
-</body>
-</html>
+<div class="background"></div>
+<div class="container">
+    <h2>Registro</h2>
+    <form (ngSubmit)="register()">
+        <label for="tipoUsuario">¿Desea registrarse como?</label>
+        <select id="tipoUsuario" name="tipoUsuario" [(ngModel)]="registerDto.tipo">
+            <option value="arrendador">Arrendador</option>
+            <option value="arrendatario">Arrendatario</option>
+        </select>
+
+        <label for="nombres">Nombres <span>*</span></label>
+        <input type="text" id="nombres" name="nombres" required [(ngModel)]="registerDto.nombre" #nombre="ngModel">
+        <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="error-message">
+            <div *ngIf="nombre?.errors?.['required']">Nombres son obligatorios.</div>
+        </div>
+        
+        <label for="apellidos">Apellidos <span>*</span></label>
+        <input type="text" id="apellidos" name="apellidos" required [(ngModel)]="registerDto.apellido" #apellido="ngModel">
+        <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="error-message">
+            <div *ngIf="apellido?.errors?.['required']">Apellidos son obligatorios.</div>
+        </div>
+        
+        <label for="email">Correo electrónico <span>*</span></label>
+        <input type="email" id="email" name="email" required [(ngModel)]="registerDto.correo" #email="ngModel">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+            <div *ngIf="email?.errors?.['required']">Correo electrónico es obligatorio.</div>
+            <div *ngIf="email?.errors?.['email']">Correo electrónico no válido.</div>
+        </div>
+        
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" [(ngModel)]="registerDto.telefono">
+        
+        <label for="password">Contraseña <span>*</span></label>
+        <input type="password" id="password" name="password" minlength="8" required [(ngModel)]="registerDto.contrasena" #password="ngModel">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+            <div *ngIf="password?.errors?.['required']">Contraseña es obligatoria.</div>
+            <div *ngIf="password?.errors?.['minlength']">Contraseña debe tener al menos 8 caracteres.</div>
+        </div>
+        
+        <input type="submit" value="Registrarse">
+    </form>
+</div>

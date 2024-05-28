@@ -7,8 +7,7 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Correo</th>
-                <th>Telefono</th>
-                <th>Eliminar arrendatario</th>                
+                <th>Telefono</th>                              
                 <th>Editar arrendatario</th>
             </tr>
         </thead>
@@ -19,7 +18,7 @@
                 <td>{{arrendatario.apellido}}</td>
                 <td>{{arrendatario.correo}}</td>
                 <td>{{arrendatario.telefono}}</td>
-                <td><a href="#" (click)="borrarArrendatario(arrendatario.id); $event.preventDefault()">Eliminar</a></td>                
+                               
                 <td><a [routerLink]="['/arrendatario/edit', arrendatario.id]">Editar</a></td>
             <!--ya no quiero que se muestre asi, quiero que esta informacion 
                 solo se muestre del usuario que viene de arrendatario list-->
